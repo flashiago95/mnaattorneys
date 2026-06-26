@@ -276,10 +276,11 @@
     }
     .rs-hero-bg {
         position: absolute; inset: 0; z-index: 0;
+        background: url('assets/images/hero-bg.webp') center center / cover no-repeat;
     }
     .rs-hero-bg::before {
         content: ''; position: absolute; inset: 0;
-        background: linear-gradient(105deg, rgba(20,27,35,0.96) 0%, rgba(28,37,48,0.88) 50%, rgba(40,52,62,0.75) 100%);
+        background: linear-gradient(105deg, rgba(20,27,35,0.94) 0%, rgba(28,37,48,0.85) 50%, rgba(40,52,62,0.7) 100%);
         z-index: 1;
     }
     .rs-hero-bg-img {
@@ -637,35 +638,88 @@
     @media(max-width:575px) { .rs-why-features { grid-template-columns: 1fr; } .rs-why-feat { border-right: none; } }
 
     /* ============================================================
-       TESTIMONIALS
+       TESTIMONIALS — Bustar exact match
     ============================================================ */
-    .rs-testi-section { background: var(--rs-secondary); padding: var(--rs-section-gap) 0; overflow: hidden; }
-    .rs-testi-grid { display: grid; grid-template-columns: 320px 1fr; gap: 70px; align-items: start; }
-    .rs-testi-left-img { width: 100%; height: 480px; object-fit: cover; display: block; }
-    .rs-testi-label { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 14px; display: block; }
-    .rs-testi-title { font-size: clamp(26px,3vw,44px); font-weight: 700; color: var(--rs-white); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 36px; }
-    .rs-testi-slider { overflow: hidden; }
-    .rs-testi-track { display: flex; gap: 20px; transition: transform 0.5s ease; }
-    .rs-testi-card {
-        flex: 0 0 calc(50% - 10px); background: rgba(255,255,255,0.05);
-        border: 1px solid rgba(255,255,255,0.07); padding: 28px 26px;
-        position: relative; min-height: 220px; display: flex; flex-direction: column;
+    .rs-testi-section {
+        background: var(--rs-secondary);
+        padding: var(--rs-section-gap) 0;
+        overflow: hidden;
+        position: relative;
     }
-    .rs-testi-quote {
-        font-size: 52px; font-weight: 900; color: rgba(255,255,255,0.05);
-        line-height: 1; position: absolute; top: 14px; right: 18px;
-        font-family: Georgia, serif;
+    .rs-testi-section::before {
+        content: '';
+        position: absolute; inset: 0;
+        background: url('assets/images/hero-bg.webp') center center / cover no-repeat;
+        opacity: 0.08;
+        z-index: 0;
     }
-    .rs-testi-name { font-size: 15px; font-weight: 700; color: var(--rs-white); margin-bottom: 3px; }
-    .rs-testi-role { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 18px; }
-    .rs-testi-rating { font-size: 34px; font-weight: 800; color: var(--rs-white); line-height: 1; margin-bottom: 8px; }
-    .rs-testi-stars { display: flex; gap: 3px; margin-bottom: 14px; }
-    .rs-testi-stars i { font-size: 13px; color: #F3B656; }
-    .rs-testi-text { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.5); font-style: italic; flex: 1; }
-    .rs-testi-nav { display: flex; gap: 10px; margin-top: 26px; }
-    .rs-testi-btn { width: 42px; height: 42px; border: 1px solid rgba(255,255,255,0.18); background: transparent; color: rgba(255,255,255,0.55); font-size: 17px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--rs-transition); }
-    .rs-testi-btn:hover { background: var(--rs-theme-primary); border-color: var(--rs-theme-primary); color: var(--rs-white); }
-    @media(max-width:991px) { .rs-testi-grid { grid-template-columns: 1fr; } .rs-testi-left-img { height: 260px; } .rs-testi-card { flex: 0 0 100%; } }
+    .rs-testi-section .container { position: relative; z-index: 1; }
+    .rs-testi-thumb img {
+        width: 100%; height: auto; display: block;
+        max-height: 640px; object-fit: cover;
+    }
+    .rs-testi-right { padding-left: 10px; }
+    .rs-testi-label {
+        font-size: 11px; font-weight: 600; letter-spacing: 0.16em;
+        text-transform: uppercase; color: rgba(255,255,255,0.45);
+        margin-bottom: 14px; display: block;
+    }
+    .rs-testi-title {
+        font-size: clamp(28px,3.5vw,48px); font-weight: 700;
+        color: var(--rs-white); line-height: 1.1;
+        letter-spacing: -0.02em; margin-bottom: 36px;
+    }
+    .rs-testi-swiper-wrap { overflow: hidden; }
+    .rs-testi-item {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.08);
+        padding: 28px 24px 24px;
+        height: 100%;
+        display: flex; flex-direction: column;
+        transition: var(--rs-transition);
+    }
+    .rs-testi-item:hover {
+        background: rgba(255,255,255,0.08);
+        border-color: rgba(255,255,255,0.14);
+    }
+    .rs-testi-avater-wrapper {
+        display: flex; align-items: flex-start;
+        justify-content: space-between; gap: 12px;
+        margin-bottom: 18px;
+    }
+    .rs-testi-avater-title {
+        font-size: 16px; font-weight: 700; color: var(--rs-white); margin-bottom: 4px;
+    }
+    .rs-testi-avater-designation {
+        font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.45);
+    }
+    .rs-testi-icon { flex-shrink: 0; opacity: 0.5; margin-top: 2px; }
+    .rs-testi-rating-wrapper {
+        display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+    }
+    .rs-testi-rating {
+        font-size: 36px; font-weight: 800; color: var(--rs-white);
+        line-height: 1; letter-spacing: -0.02em;
+    }
+    .rs-testi-rating-icon { display: flex; gap: 3px; align-items: center; }
+    .rs-testi-rating-icon i { font-size: 14px; color: #F3A000; }
+    .rs-testi-rating-icon i.ri-star-line { color: rgba(255,255,255,0.2); }
+    .rs-testi-desc {
+        font-size: 14px; line-height: 1.72; color: rgba(255,255,255,0.55);
+        font-style: italic; flex: 1;
+    }
+    /* swiper pagination dots for testimonial */
+    .rs-testi-pagination .swiper-pagination-bullet {
+        width: 7px; height: 7px;
+        background: rgba(255,255,255,0.25); opacity: 1;
+    }
+    .rs-testi-pagination .swiper-pagination-bullet-active {
+        background: var(--rs-theme-primary); width: 22px; border-radius: 4px;
+    }
+    @media(max-width:991px) {
+        .rs-testi-thumb img { max-height: 320px; }
+        .rs-testi-right { padding-left: 0; margin-top: 40px; }
+    }
 
     /* ============================================================
        FAQ
@@ -738,31 +792,124 @@
     @media(max-width:767px) { .rs-cta-inner { flex-direction: column; align-items: flex-start; } }
 
     /* ============================================================
-       FOOTER
+       FOOTER — Bustar style: dark bg + city image + gradient overlay
     ============================================================ */
-    .rs-footer { background: var(--rs-dark); color: var(--rs-white); }
-    .rs-footer-main { padding: 80px 0 56px; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 56px; border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .rs-footer-logo { height: 46px; width: auto; object-fit: contain; background: white; padding: 5px 10px; border-radius: 4px; align-self: flex-start; margin-bottom: 18px; }
+    .rs-footer {
+        position: relative;
+        background: #1a2330;
+        color: var(--rs-white);
+        overflow: hidden;
+    }
+    /* City/building background image with gradient overlay — like the screenshot */
+    .rs-footer::before {
+        content: '';
+        position: absolute; inset: 0;
+        background: url('assets/images/hero-bg.webp') center bottom / cover no-repeat;
+        opacity: 0.07;
+        z-index: 0;
+    }
+    /* Gradient that fades to dark at the bottom (like screenshot) */
+    .rs-footer::after {
+        content: '';
+        position: absolute; inset: 0;
+        background: linear-gradient(
+            180deg,
+            rgba(26,35,48,0.82) 0%,
+            rgba(18,24,34,0.9) 60%,
+            rgba(10,14,20,1) 100%
+        );
+        z-index: 1;
+    }
+    .rs-footer > * { position: relative; z-index: 2; }
+    .rs-footer .container { position: relative; z-index: 2; }
+    .rs-footer-main {
+        padding: 80px 0 56px;
+        display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr;
+        gap: 56px;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .rs-footer-logo {
+        height: 46px; width: auto; object-fit: contain;
+        background: white; padding: 5px 10px; border-radius: 4px;
+        align-self: flex-start; margin-bottom: 18px;
+    }
     .rs-footer-about { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
     .rs-footer-social { display: flex; gap: 10px; }
-    .rs-social-btn { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.45); font-size: 16px; transition: var(--rs-transition); }
+    .rs-social-btn {
+        width: 38px; height: 38px;
+        border: 1px solid rgba(255,255,255,0.12);
+        display: flex; align-items: center; justify-content: center;
+        color: rgba(255,255,255,0.5); font-size: 16px;
+        transition: var(--rs-transition);
+    }
     .rs-social-btn:hover { background: var(--rs-theme-primary); border-color: var(--rs-theme-primary); color: white; }
-    .rs-footer-col-title { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rs-white); margin-bottom: 22px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .rs-footer-col-title {
+        font-size: 13px; font-weight: 700; letter-spacing: 0.08em;
+        text-transform: uppercase; color: var(--rs-white);
+        margin-bottom: 22px; padding-bottom: 12px;
+        border-bottom: 2px solid var(--rs-theme-primary);
+        display: inline-block;
+    }
     .rs-footer-links { display: flex; flex-direction: column; gap: 10px; }
-    .rs-footer-links a { font-size: 14px; color: rgba(255,255,255,0.4); display: flex; align-items: center; gap: 8px; transition: var(--rs-transition); }
+    .rs-footer-links a {
+        font-size: 14px; color: rgba(255,255,255,0.45);
+        display: flex; align-items: center; gap: 8px;
+        transition: var(--rs-transition);
+    }
     .rs-footer-links a::before { content: ''; width: 5px; height: 1px; background: var(--rs-theme-primary); flex-shrink: 0; }
     .rs-footer-links a:hover { color: var(--rs-white); padding-left: 4px; }
     .rs-footer-contact-item { display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
     .rs-footer-contact-item i { color: var(--rs-theme-primary); font-size: 15px; margin-top: 2px; flex-shrink: 0; }
-    .rs-footer-contact-item a, .rs-footer-contact-item span { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.5; transition: var(--rs-transition); }
+    .rs-footer-contact-item a, .rs-footer-contact-item span {
+        font-size: 14px; color: rgba(255,255,255,0.45);
+        line-height: 1.5; transition: var(--rs-transition);
+    }
     .rs-footer-contact-item a:hover { color: var(--rs-white); }
-    .rs-footer-copyright { padding: 22px 0; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    /* Newsletter bar — like the screenshot */
+    .rs-footer-newsletter {
+        border-top: 1px solid rgba(255,255,255,0.07);
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+        padding: 32px 0; margin: 0;
+        display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .rs-footer-newsletter h4 {
+        font-size: 22px; font-weight: 700; color: var(--rs-white);
+        white-space: nowrap; margin: 0;
+    }
+    .rs-newsletter-form {
+        display: flex; gap: 0; flex: 1; max-width: 600px;
+    }
+    .rs-newsletter-input {
+        flex: 1; background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.1); border-right: none;
+        color: rgba(255,255,255,0.8); padding: 14px 20px;
+        font-size: 14px; font-family: var(--rs-font); outline: none;
+    }
+    .rs-newsletter-input::placeholder { color: rgba(255,255,255,0.35); }
+    .rs-newsletter-btn {
+        background: transparent; border: 1px solid rgba(255,255,255,0.2);
+        color: rgba(255,255,255,0.7); padding: 14px 24px;
+        font-size: 13px; font-weight: 600; cursor: pointer;
+        display: inline-flex; align-items: center; gap: 8px;
+        transition: var(--rs-transition); white-space: nowrap;
+        font-family: var(--rs-font);
+    }
+    .rs-newsletter-btn:hover { background: var(--rs-theme-primary); border-color: var(--rs-theme-primary); color: white; }
+    .rs-footer-copyright {
+        padding: 22px 0;
+        display: flex; align-items: center; justify-content: space-between; gap: 18px;
+    }
     .rs-footer-copyright p { font-size: 13px; color: rgba(255,255,255,0.28); }
     .rs-footer-copyright a { color: rgba(255,255,255,0.45); transition: var(--rs-transition); }
     .rs-footer-copyright a:hover { color: var(--rs-theme-primary); }
     .rs-copy-links { display: flex; gap: 22px; }
     @media(max-width:1100px) { .rs-footer-main { grid-template-columns: 1fr 1fr; gap: 40px; } }
-    @media(max-width:767px) { .rs-footer-main { grid-template-columns: 1fr; gap: 36px; padding: 60px 0 40px; } .rs-footer-copyright { flex-direction: column; text-align: center; } }
+    @media(max-width:767px) {
+        .rs-footer-main { grid-template-columns: 1fr; gap: 36px; padding: 60px 0 40px; }
+        .rs-footer-copyright { flex-direction: column; text-align: center; }
+        .rs-footer-newsletter { flex-direction: column; align-items: flex-start; gap: 16px; }
+        .rs-newsletter-form { width: 100%; }
+    }
 
     /* ============================================================
        BACK TO TOP
@@ -1220,56 +1367,136 @@
 </section>
 
 <!-- ============================================================
-     TESTIMONIALS
+     TESTIMONIALS — Bustar layout exact match
 ============================================================ -->
-<section class="rs-testi-section" id="rs-testimonials">
+<section class="rs-testi-section rs-swiper" id="rs-testimonials">
+    <!-- dark bg thumb handled by CSS -->
     <div class="container">
-        <div class="rs-testi-grid">
-            <div class="wow fadeInLeft">
-                <img class="rs-testi-left-img" src="assets/images/testi-left.jpg" alt="Client Trust" onerror="this.src='https://placehold.co/380x480/1c2530/ffffff?text=Client+Trust'">
+        <div class="row g-5" style="align-items:flex-start">
+            <!-- Left image col -->
+            <div class="col-lg-5 col-xl-4 col-xxl-4">
+                <div class="rs-testi-thumb wow fadeInLeft">
+                    <img src="assets/images/testi-thumb.webp" alt="Client testimonials" 
+                         onerror="this.src='https://placehold.co/384x637/2B3944/ffffff?text=Clients'">
+                </div>
             </div>
-            <div class="wow fadeInRight" data-wow-delay="0.1s">
-                <span class="rs-testi-label">Our Client Testimonials</span>
-                <h2 class="rs-testi-title rs-split-text-enable split-in-up">What our clients say?</h2>
-                <div class="rs-testi-slider" id="rsTestiSlider">
-                    <div class="rs-testi-track" id="rsTestiTrack">
-                        <div class="rs-testi-card">
-                            <div class="rs-testi-quote">&ldquo;</div>
-                            <div class="rs-testi-name">Thabo Mokoena</div>
-                            <div class="rs-testi-role">CEO, Property Development Co.</div>
-                            <div class="rs-testi-rating">5.0</div>
-                            <div class="rs-testi-stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
-                            <p class="rs-testi-text">MNA handled our entire portfolio of property transfers with exceptional professionalism. Their conveyancing team is second to none — fast, accurate, and always available.</p>
-                        </div>
-                        <div class="rs-testi-card">
-                            <div class="rs-testi-quote">&ldquo;</div>
-                            <div class="rs-testi-name">Zanele Dlamini</div>
-                            <div class="rs-testi-role">HR Director, Financial Services</div>
-                            <div class="rs-testi-rating">4.5</div>
-                            <div class="rs-testi-stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div>
-                            <p class="rs-testi-text">Professional, knowledgeable, and responsive. Their labour law guidance transformed how we handle disciplinary proceedings — our exposure has reduced significantly.</p>
-                        </div>
-                        <div class="rs-testi-card">
-                            <div class="rs-testi-quote">&ldquo;</div>
-                            <div class="rs-testi-name">Sipho Nkosi</div>
-                            <div class="rs-testi-role">Founder &amp; Chairman, Retail Group</div>
-                            <div class="rs-testi-rating">5.0</div>
-                            <div class="rs-testi-stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
-                            <p class="rs-testi-text">Outstanding corporate law expertise. MNA guided us through a complex merger and their strategic thinking made a significant difference to the outcome.</p>
-                        </div>
-                        <div class="rs-testi-card">
-                            <div class="rs-testi-quote">&ldquo;</div>
-                            <div class="rs-testi-name">Amahle Khumalo</div>
-                            <div class="rs-testi-role">Company Secretary, Parastatal</div>
-                            <div class="rs-testi-rating">5.0</div>
-                            <div class="rs-testi-stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
-                            <p class="rs-testi-text">Mande and his team bring a rare combination of legal depth and business acumen. Their governance advisory has been invaluable to our board.</p>
+            <!-- Right content col -->
+            <div class="col-lg-7 col-xl-8 col-xxl-8">
+                <div class="rs-testi-right wow fadeInRight" data-wow-delay="0.1s">
+                    <div class="rs-testi-header">
+                        <span class="rs-testi-label">Our Clients Testimonials</span>
+                        <h2 class="rs-testi-title rs-split-text-enable split-in-up">What our customers say?</h2>
+                    </div>
+                    <!-- Swiper slider -->
+                    <div class="rs-testi-swiper-wrap rs-swiper">
+                        <div class="swiper"
+                             data-loop="true"
+                             data-speed="1500"
+                             data-autoplay="true"
+                             data-dots-dynamic="false"
+                             data-effect="slide"
+                             data-delay="3000"
+                             data-item="2"
+                             data-item-xl="2"
+                             data-item-lg="2"
+                             data-item-md="1"
+                             data-item-sm="1"
+                             data-item-xs="1"
+                             data-margin="24">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="rs-testi-item">
+                                        <div class="rs-testi-avater-wrapper">
+                                            <div class="rs-testi-avater-info">
+                                                <h5 class="rs-testi-avater-title">Thabo Mokoena</h5>
+                                                <span class="rs-testi-avater-designation">CEO, Property Developer</span>
+                                            </div>
+                                            <div class="rs-testi-icon"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="38" viewBox="0 0 60 44" fill="none">
+    <path d="M12.7244 28.0195C11.6004 34.2343 9.70513 38.7081 8.20652 41.485C7.61148 42.5648 8.82362 43.777 9.88146 43.1599C22.4434 35.8431 27.953 25.1765 28.6362 16.6036C29.2312 9.22068 24.1844 1.61742 16.5591 0.229C8.9338 -1.15942 1.61704 3.90943 0.228614 11.5347C-1.22592 19.5347 4.41591 27.2261 12.7244 28.0195Z" fill="#3D4C57"/>
+    <path d="M44.0406 28.0195C42.9166 34.2343 41.0213 38.7081 39.5227 41.485C38.9277 42.5648 40.1398 43.777 41.1976 43.1599C53.7595 35.8431 59.2692 25.1765 59.9524 16.6036C60.5474 9.22068 55.5006 1.61742 47.8753 0.229C40.25 -1.15942 32.9332 3.90943 31.5448 11.5347C30.0902 19.5347 35.7321 27.2261 44.0406 28.0195Z" fill="#3D4C57"/>
+</svg></div>
+                                        </div>
+                                        <div class="rs-testi-rating-wrapper">
+                                            <span class="rs-testi-rating">5.0</span>
+                                            <div class="rs-testi-rating-icon">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                            </div>
+                                        </div>
+                                        <p class="rs-testi-desc">MNA handled our entire property transfer portfolio with exceptional professionalism. Their conveyancing team is second to none — fast, accurate, and always available.</p>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="rs-testi-item">
+                                        <div class="rs-testi-avater-wrapper">
+                                            <div class="rs-testi-avater-info">
+                                                <h5 class="rs-testi-avater-title">Zanele Dlamini</h5>
+                                                <span class="rs-testi-avater-designation">HR Director, Financial Services</span>
+                                            </div>
+                                            <div class="rs-testi-icon"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="38" viewBox="0 0 60 44" fill="none">
+    <path d="M12.7244 28.0195C11.6004 34.2343 9.70513 38.7081 8.20652 41.485C7.61148 42.5648 8.82362 43.777 9.88146 43.1599C22.4434 35.8431 27.953 25.1765 28.6362 16.6036C29.2312 9.22068 24.1844 1.61742 16.5591 0.229C8.9338 -1.15942 1.61704 3.90943 0.228614 11.5347C-1.22592 19.5347 4.41591 27.2261 12.7244 28.0195Z" fill="#3D4C57"/>
+    <path d="M44.0406 28.0195C42.9166 34.2343 41.0213 38.7081 39.5227 41.485C38.9277 42.5648 40.1398 43.777 41.1976 43.1599C53.7595 35.8431 59.2692 25.1765 59.9524 16.6036C60.5474 9.22068 55.5006 1.61742 47.8753 0.229C40.25 -1.15942 32.9332 3.90943 31.5448 11.5347C30.0902 19.5347 35.7321 27.2261 44.0406 28.0195Z" fill="#3D4C57"/>
+</svg></div>
+                                        </div>
+                                        <div class="rs-testi-rating-wrapper">
+                                            <span class="rs-testi-rating">4.5</span>
+                                            <div class="rs-testi-rating-icon">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i>
+                                            </div>
+                                        </div>
+                                        <p class="rs-testi-desc">Professional, knowledgeable, and responsive. Their labour law guidance transformed how we handle disciplinary proceedings. Highly recommend!</p>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="rs-testi-item">
+                                        <div class="rs-testi-avater-wrapper">
+                                            <div class="rs-testi-avater-info">
+                                                <h5 class="rs-testi-avater-title">Sipho Nkosi</h5>
+                                                <span class="rs-testi-avater-designation">Founder &amp; Chairman, Retail Group</span>
+                                            </div>
+                                            <div class="rs-testi-icon"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="38" viewBox="0 0 60 44" fill="none">
+    <path d="M12.7244 28.0195C11.6004 34.2343 9.70513 38.7081 8.20652 41.485C7.61148 42.5648 8.82362 43.777 9.88146 43.1599C22.4434 35.8431 27.953 25.1765 28.6362 16.6036C29.2312 9.22068 24.1844 1.61742 16.5591 0.229C8.9338 -1.15942 1.61704 3.90943 0.228614 11.5347C-1.22592 19.5347 4.41591 27.2261 12.7244 28.0195Z" fill="#3D4C57"/>
+    <path d="M44.0406 28.0195C42.9166 34.2343 41.0213 38.7081 39.5227 41.485C38.9277 42.5648 40.1398 43.777 41.1976 43.1599C53.7595 35.8431 59.2692 25.1765 59.9524 16.6036C60.5474 9.22068 55.5006 1.61742 47.8753 0.229C40.25 -1.15942 32.9332 3.90943 31.5448 11.5347C30.0902 19.5347 35.7321 27.2261 44.0406 28.0195Z" fill="#3D4C57"/>
+</svg></div>
+                                        </div>
+                                        <div class="rs-testi-rating-wrapper">
+                                            <span class="rs-testi-rating">5.0</span>
+                                            <div class="rs-testi-rating-icon">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                            </div>
+                                        </div>
+                                        <p class="rs-testi-desc">Outstanding corporate law expertise. MNA guided us through a complex merger and their strategic thinking made a significant difference to the final outcome.</p>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="rs-testi-item">
+                                        <div class="rs-testi-avater-wrapper">
+                                            <div class="rs-testi-avater-info">
+                                                <h5 class="rs-testi-avater-title">Amahle Khumalo</h5>
+                                                <span class="rs-testi-avater-designation">Company Secretary, Parastatal</span>
+                                            </div>
+                                            <div class="rs-testi-icon"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="38" viewBox="0 0 60 44" fill="none">
+    <path d="M12.7244 28.0195C11.6004 34.2343 9.70513 38.7081 8.20652 41.485C7.61148 42.5648 8.82362 43.777 9.88146 43.1599C22.4434 35.8431 27.953 25.1765 28.6362 16.6036C29.2312 9.22068 24.1844 1.61742 16.5591 0.229C8.9338 -1.15942 1.61704 3.90943 0.228614 11.5347C-1.22592 19.5347 4.41591 27.2261 12.7244 28.0195Z" fill="#3D4C57"/>
+    <path d="M44.0406 28.0195C42.9166 34.2343 41.0213 38.7081 39.5227 41.485C38.9277 42.5648 40.1398 43.777 41.1976 43.1599C53.7595 35.8431 59.2692 25.1765 59.9524 16.6036C60.5474 9.22068 55.5006 1.61742 47.8753 0.229C40.25 -1.15942 32.9332 3.90943 31.5448 11.5347C30.0902 19.5347 35.7321 27.2261 44.0406 28.0195Z" fill="#3D4C57"/>
+</svg></div>
+                                        </div>
+                                        <div class="rs-testi-rating-wrapper">
+                                            <span class="rs-testi-rating">5.0</span>
+                                            <div class="rs-testi-rating-icon">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                            </div>
+                                        </div>
+                                        <p class="rs-testi-desc">Mande and his team bring a rare combination of legal depth and business acumen. Their governance advisory has been invaluable to our board and executive committee.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-pagination rs-testi-pagination" style="margin-top:24px;position:relative;text-align:left"></div>
                         </div>
                     </div>
-                </div>
-                <div class="rs-testi-nav">
-                    <button class="rs-testi-btn" id="rsTestiPrev"><i class="ri-arrow-left-line"></i></button>
-                    <button class="rs-testi-btn" id="rsTestiNext"><i class="ri-arrow-right-line"></i></button>
                 </div>
             </div>
         </div>
@@ -1371,17 +1598,23 @@
 </main>
 
 <!-- ============================================================
-     FOOTER
+     FOOTER — Bustar style with gradient + bg image
 ============================================================ -->
 <footer class="rs-footer">
     <div class="container">
+
+        <!-- Main footer grid -->
         <div class="rs-footer-main">
             <div>
                 <img class="rs-footer-logo" src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMxaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0MCA3OS4xNjA0NTEsIDIwMTcvMDUvMDYtMDE6MDg6MjEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ2NENEM0VBQjc1NzExRTlCRkUwQkZDRjZEMEFFQTkwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ2NENEM0VCQjc1NzExRTlCRkUwQkZDRjZEMEFFQTkwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDY0Q0QzRThCNzU3MTFFOUJGRTBCRkNGNkQwQUVBOTAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDY0Q0QzRTlCNzU3MTFFOUJGRTBCRkNGNkQwQUVBOTAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAQEB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" alt="MNA Attorneys">
                 <p class="rs-footer-about">A boutique corporate law firm combining legal expertise with entrepreneurial insight — serving corporates, government, and private clients across South Africa.</p>
-                <div class="rs-footer-social">
-                    <a href="#" class="rs-social-btn"><i class="ri-linkedin-box-fill"></i></a>
+                <div class="rs-footer-contact-item"><i class="ri-phone-line"></i><span>JHB: <a href="tel:0115133387">011 513 3387</a></span></div>
+                <div class="rs-footer-contact-item"><i class="ri-phone-line"></i><span>EL: <a href="tel:0437211018">043 721 1018</a></span></div>
+                <div class="rs-footer-contact-item"><i class="ri-mail-line"></i><a href="mailto:info@mnaattorneys.co.za">info@mnaattorneys.co.za</a></div>
+                <div class="rs-footer-contact-item"><i class="ri-time-line"></i><span>Mon–Fri: 8:00am – 6:00pm</span></div>
+                <div class="rs-footer-social" style="margin-top:16px">
                     <a href="#" class="rs-social-btn"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="rs-social-btn"><i class="ri-linkedin-box-fill"></i></a>
                     <a href="#" class="rs-social-btn"><i class="ri-twitter-x-fill"></i></a>
                 </div>
             </div>
@@ -1404,24 +1637,34 @@
                     <a href="#rs-faq">FAQ</a>
                     <a href="#rs-contact">Contact Us</a>
                     <a href="#">BBBEE Profile</a>
+                    <a href="#">News &amp; Insights</a>
                 </div>
             </div>
             <div>
-                <h5 class="rs-footer-col-title">Contact</h5>
-                <div class="rs-footer-contact-item"><i class="ri-map-pin-line"></i><span>Spaces, Design Quarter, Leslie Avenue, Fourways, Johannesburg 2191</span></div>
-                <div class="rs-footer-contact-item"><i class="ri-map-pin-2-line"></i><span>6 Sansom Street, Vincent, East London 5247</span></div>
-                <div class="rs-footer-contact-item"><i class="ri-phone-line"></i><a href="tel:0115133387">011 513 3387</a></div>
-                <div class="rs-footer-contact-item"><i class="ri-mail-line"></i><a href="mailto:info@mnaattorneys.co.za">info@mnaattorneys.co.za</a></div>
-                <div class="rs-footer-contact-item"><i class="ri-global-line"></i><a href="http://www.mnaattorneys.co.za" target="_blank">www.mnaattorneys.co.za</a></div>
+                <h5 class="rs-footer-col-title">Offices</h5>
+                <div class="rs-footer-contact-item"><i class="ri-map-pin-line"></i><span>Spaces, Design Quarter, Leslie Ave, Fourways, Johannesburg 2191</span></div>
+                <div class="rs-footer-contact-item" style="margin-top:16px"><i class="ri-map-pin-2-line"></i><span>6 Sansom Street, Vincent, East London 5247</span></div>
+                <div class="rs-footer-contact-item" style="margin-top:16px"><i class="ri-global-line"></i><a href="http://www.mnaattorneys.co.za" target="_blank">www.mnaattorneys.co.za</a></div>
             </div>
         </div>
+
+        <!-- Newsletter bar -->
+        <div class="rs-footer-newsletter">
+            <h4>Subscribe Newsletter</h4>
+            <div class="rs-newsletter-form">
+                <input class="rs-newsletter-input" type="email" placeholder="Enter your email address">
+                <button class="rs-newsletter-btn">
+                    Send Now <i class="ri-arrow-right-up-line"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Copyright -->
         <div class="rs-footer-copyright">
+            <p>Terms &amp; Agreements &nbsp;|&nbsp; <a href="#">Privacy Policy</a></p>
             <p>Copyright &copy; <span id="year"></span> Mdyesha Ndema Attorneys. All rights reserved.</p>
-            <div class="rs-copy-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms &amp; Conditions</a>
-            </div>
         </div>
+
     </div>
 </footer>
 
