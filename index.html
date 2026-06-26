@@ -138,6 +138,7 @@
     .container { max-width: 1300px; margin: 0 auto; padding: 0 40px; }
     @media(max-width:768px) { .container { padding: 0 20px; } }
     .section-space { padding: var(--rs-section-gap) 0; }
+    .section-space-top { padding-top: var(--rs-section-gap); }
     .section-space-sm { padding: 70px 0; }
 
     .rs-section-label {
@@ -797,7 +798,7 @@
     ============================================================ */
     .rs-team-section { padding: var(--rs-section-gap) 0; background: var(--rs-white); }
     .rs-team-header { margin-bottom: 50px; }
-    .rs-team-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; }
+    .rs-team-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
     .rs-team-card { position: relative; overflow: hidden; background: var(--rs-off-white); }
     .rs-team-card-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; transition: transform 0.6s ease; filter: grayscale(15%); }
     .rs-team-card:hover .rs-team-card-img { transform: scale(1.04); filter: grayscale(0%); }
@@ -812,14 +813,118 @@
     /* ============================================================
        SECTORS
     ============================================================ */
-    .rs-sectors-section { padding: 56px 0; background: var(--rs-off-white); border-top: 1px solid var(--rs-border); border-bottom: 1px solid var(--rs-border); }
-    .rs-sectors-inner { display: flex; align-items: center; gap: 40px; }
-    .rs-sectors-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rs-text-muted); white-space: nowrap; flex-shrink: 0; }
-    .rs-sectors-divider { width: 1px; height: 36px; background: var(--rs-border); flex-shrink: 0; }
-    .rs-sectors-list { display: flex; flex-wrap: wrap; gap: 10px; }
-    .rs-sector-tag { padding: 7px 16px; border: 1px solid var(--rs-border); font-size: 13px; font-weight: 500; color: var(--rs-secondary); background: var(--rs-white); transition: var(--rs-transition); }
-    .rs-sector-tag:hover { background: var(--rs-theme-primary); color: var(--rs-white); border-color: var(--rs-theme-primary); }
-    @media(max-width:767px) { .rs-sectors-inner { flex-direction: column; align-items: flex-start; } }
+    /* ============================================================
+       SECTORS — Cutting-edge dark marquee ticker
+    ============================================================ */
+    .rs-sectors-section {
+        background: var(--rs-dark);
+        padding: 0;
+        overflow: hidden;
+        border-top: 1px solid rgba(255,255,255,0.06);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        position: relative;
+    }
+    .rs-sectors-header {
+        padding: 60px 0 40px;
+        display: flex; align-items: flex-end;
+        justify-content: space-between; gap: 40px;
+    }
+    .rs-sectors-overline {
+        font-size: 11px; font-weight: 600;
+        letter-spacing: 0.16em; text-transform: uppercase;
+        color: var(--rs-theme-primary); margin-bottom: 12px;
+        display: block;
+    }
+    .rs-sectors-title {
+        font-size: clamp(28px, 3vw, 44px);
+        font-weight: 700; color: var(--rs-white);
+        line-height: 1.1; letter-spacing: -0.02em;
+        margin: 0;
+    }
+    .rs-sectors-title span { color: var(--rs-theme-primary); }
+    .rs-sectors-desc {
+        font-size: 15px; line-height: 1.7;
+        color: rgba(255,255,255,0.45);
+        max-width: 320px; text-align: right;
+    }
+    /* Grid of sector cards */
+    .rs-sectors-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 1px solid rgba(255,255,255,0.06);
+        margin-bottom: 0;
+    }
+    .rs-sector-card {
+        padding: 32px 28px;
+        border-right: 1px solid rgba(255,255,255,0.06);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        display: flex; flex-direction: column; gap: 14px;
+        transition: var(--rs-transition);
+        position: relative; overflow: hidden;
+        cursor: default;
+    }
+    .rs-sector-card::before {
+        content: ''; position: absolute;
+        inset: 0; background: var(--rs-theme-primary);
+        transform: translateY(100%);
+        transition: transform 0.4s ease;
+        z-index: 0;
+    }
+    .rs-sector-card:hover::before { transform: translateY(0); }
+    .rs-sector-card:last-child { border-right: none; }
+    .rs-sector-card:nth-child(4) { border-right: none; }
+    .rs-sector-card:nth-child(5),
+    .rs-sector-card:nth-child(6),
+    .rs-sector-card:nth-child(7),
+    .rs-sector-card:nth-child(8) { border-bottom: none; }
+    .rs-sector-card:nth-child(8) { border-right: none; }
+    .rs-sector-num {
+        font-size: 11px; font-weight: 700;
+        color: var(--rs-theme-primary);
+        letter-spacing: 0.1em; position: relative; z-index: 1;
+        transition: var(--rs-transition);
+    }
+    .rs-sector-card:hover .rs-sector-num { color: rgba(255,255,255,0.7); }
+    .rs-sector-icon {
+        width: 40px; height: 40px;
+        display: flex; align-items: center; justify-content: center;
+        position: relative; z-index: 1;
+    }
+    .rs-sector-icon i {
+        font-size: 26px; color: rgba(255,255,255,0.25);
+        transition: var(--rs-transition);
+    }
+    .rs-sector-card:hover .rs-sector-icon i { color: rgba(255,255,255,0.9); }
+    .rs-sector-name {
+        font-size: 15px; font-weight: 600;
+        color: var(--rs-white); line-height: 1.3;
+        position: relative; z-index: 1;
+        transition: var(--rs-transition);
+    }
+    .rs-sector-card:hover .rs-sector-name { color: var(--rs-white); }
+    .rs-sector-arrow {
+        margin-top: auto;
+        width: 32px; height: 32px;
+        border: 1px solid rgba(255,255,255,0.12);
+        display: flex; align-items: center; justify-content: center;
+        color: rgba(255,255,255,0.3); font-size: 14px;
+        transition: var(--rs-transition);
+        position: relative; z-index: 1;
+    }
+    .rs-sector-card:hover .rs-sector-arrow {
+        background: rgba(255,255,255,0.15);
+        border-color: rgba(255,255,255,0.4);
+        color: white; transform: rotate(-45deg);
+    }
+    @media(max-width:1100px) { .rs-sectors-grid { grid-template-columns: repeat(4,1fr); } }
+    @media(max-width:768px) {
+        .rs-sectors-grid { grid-template-columns: repeat(2,1fr); }
+        .rs-sector-card:nth-child(4) { border-right: none; }
+        .rs-sector-card:nth-child(2n) { border-right: none; }
+        .rs-sectors-header { flex-direction: column; align-items: flex-start; }
+        .rs-sectors-desc { text-align: left; max-width: 100%; }
+    }
+    @media(max-width:480px) { .rs-sectors-grid { grid-template-columns: 1fr 1fr; } }
 
     /* ============================================================
        CTA
@@ -1358,12 +1463,9 @@
                     <div class="rs-counter-label">Years Of<br>Experience</div>
                     <p class="rs-about-body">MNA was founded by practitioners who've worked inside the corporate world — as in-house legal advisers at Standard Bank, Land Bank, Sanlam, and JSE-listed companies. We understand what your business actually needs, not just what the law requires.</p>
                 </div>
-                <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:28px">
-                    <a href="#rs-services" class="rs-btn-pill-dark">
-                        Explore More <i class="ri-arrow-right-up-line"></i>
-                    </a>
-                    <span class="rs-bbbee-tag"><i class="ri-verified-badge-line" style="color:#AB052D"></i> Level 1 BBBEE Contributor</span>
-                </div>
+                <a href="#rs-services" class="rs-btn-pill-dark" style="margin-top:28px;display:inline-flex">
+                    Explore More <i class="ri-arrow-right-up-line"></i>
+                </a>
             </div>
             <div class="wow fadeInRight" data-wow-delay="0.2s">
                 <img class="rs-about-img" src="assets/images/about.jpg" alt="MNA Attorneys Directors" onerror="this.src='https://placehold.co/640x480/2B3944/ffffff?text=MNA+Attorneys'">
@@ -1435,23 +1537,66 @@
 </section>
 
 <!-- ============================================================
-     SECTORS
+     SECTORS — Cutting-edge dark grid
 ============================================================ -->
-<section class="rs-sectors-section">
+<section class="rs-sectors-section" id="rs-sectors">
     <div class="container">
-        <div class="rs-sectors-inner wow fadeInUp">
-            <span class="rs-sectors-label">Sectors We Serve</span>
-            <div class="rs-sectors-divider"></div>
-            <div class="rs-sectors-list">
-                <span class="rs-sector-tag">Corporates</span>
-                <span class="rs-sector-tag">Government Departments</span>
-                <span class="rs-sector-tag">Parastatals &amp; SOEs</span>
-                <span class="rs-sector-tag">SMEs</span>
-                <span class="rs-sector-tag">Property Developers</span>
-                <span class="rs-sector-tag">Entertainment &amp; Sports</span>
-                <span class="rs-sector-tag">JSE-Listed Entities</span>
-                <span class="rs-sector-tag">Development Finance Institutions</span>
+        <div class="rs-sectors-header">
+            <div>
+                <span class="rs-sectors-overline">Who We Serve</span>
+                <h2 class="rs-sectors-title">Sectors We <span>Serve</span></h2>
             </div>
+            <p class="rs-sectors-desc">From government entities to JSE-listed companies — our expertise spans the full breadth of South African industry.</p>
+        </div>
+    </div>
+    <div class="rs-sectors-grid">
+        <div class="rs-sector-card wow fadeInUp" data-wow-delay="0.05s">
+            <span class="rs-sector-num">01</span>
+            <div class="rs-sector-icon"><i class="ri-building-2-line"></i></div>
+            <div class="rs-sector-name">Corporates &amp; Listed Entities</div>
+            <div class="rs-sector-arrow"><i class="ri-arrow-right-up-line"></i></div>
+        </div>
+        <div class="rs-sector-card wow fadeInUp" data-wow-delay="0.1s">
+            <span class="rs-sector-num">02</span>
+            <div class="rs-sector-icon"><i class="ri-government-line"></i></div>
+            <div class="rs-sector-name">Government Departments</div>
+            <div class="rs-sector-arrow"><i class="ri-arrow-right-up-line"></i></div>
+        </div>
+        <div class="rs-sector-card wow fadeInUp" data-wow-delay="0.15s">
+            <span class="rs-sector-num">03</span>
+            <div class="rs-sector-icon"><i class="ri-bank-line"></i></div>
+            <div class="rs-sector-name">Parastatals &amp; SOEs</div>
+            <div class="rs-sector-arrow"><i class="ri-arrow-right-up-line"></i></div>
+        </div>
+        <div class="rs-sector-card wow fadeInUp" data-wow-delay="0.2s">
+            <span class="rs-sector-num">04</span>
+            <div class="rs-sector-icon"><i class="ri-store-2-line"></i></div>
+            <div class="rs-sector-name">SMEs &amp; Startups</div>
+            <div class="rs-sector-arrow"><i class="ri-arrow-right-up-line"></i></div>
+        </div>
+        <div class="rs-sector-card wow fadeInUp" data-wow-delay="0.05s">
+            <span class="rs-sector-num">05</span>
+            <div class="rs-sector-icon"><i class="ri-home-5-line"></i></div>
+            <div class="rs-sector-name">Property Developers</div>
+            <div class="rs-sector-arrow"><i class="ri-arrow-right-up-line"></i></div>
+        </div>
+        <div class="rs-sector-card wow fadeInUp" data-wow-delay="0.1s">
+            <span class="rs-sector-num">06</span>
+            <div class="rs-sector-icon"><i class="ri-football-line"></i></div>
+            <div class="rs-sector-name">Entertainment &amp; Sports</div>
+            <div class="rs-sector-arrow"><i class="ri-arrow-right-up-line"></i></div>
+        </div>
+        <div class="rs-sector-card wow fadeInUp" data-wow-delay="0.15s">
+            <span class="rs-sector-num">07</span>
+            <div class="rs-sector-icon"><i class="ri-funds-line"></i></div>
+            <div class="rs-sector-name">Development Finance Institutions</div>
+            <div class="rs-sector-arrow"><i class="ri-arrow-right-up-line"></i></div>
+        </div>
+        <div class="rs-sector-card wow fadeInUp" data-wow-delay="0.2s">
+            <span class="rs-sector-num">08</span>
+            <div class="rs-sector-icon"><i class="ri-award-line"></i></div>
+            <div class="rs-sector-name">Private Clients</div>
+            <div class="rs-sector-arrow"><i class="ri-arrow-right-up-line"></i></div>
         </div>
     </div>
 </section>
@@ -1739,11 +1884,19 @@
                 </div>
             </div>
             <div class="rs-team-card gsap-stagger-child wow fadeInUp" data-wow-delay="0.2s">
-                <img class="rs-team-card-img" src="assets/images/team-mande.jpg" alt="Mande Ndema" onerror="this.src='https://placehold.co/700x900/121213/ffffff?text=Mande+Ndema'">
+                <img class="rs-team-card-img" src="assets/images/team-mande.jpg" alt="Mande Ndema" onerror="this.src='https://placehold.co/700x900/1c2530/ffffff?text=Mande+Ndema'">
                 <div class="rs-team-card-overlay">
                     <div class="rs-team-role">Co-Founder &amp; CEO</div>
                     <div class="rs-team-name">Mande Ndema</div>
                     <div class="rs-team-qual"><i class="ri-graduation-cap-line"></i> LLB (UKZN) | PMD (GIBS) | Cert. Property Investment (Wits)</div>
+                </div>
+            </div>
+            <div class="rs-team-card gsap-stagger-child wow fadeInUp" data-wow-delay="0.3s">
+                <img class="rs-team-card-img" src="assets/images/team-masibonge.jpg" alt="Masibonge Mzwakali" onerror="this.src='https://placehold.co/700x900/121213/ffffff?text=Masibonge+Mzwakali'">
+                <div class="rs-team-card-overlay">
+                    <div class="rs-team-role">Director</div>
+                    <div class="rs-team-name">Masibonge Mzwakali</div>
+                    <div class="rs-team-qual"><i class="ri-graduation-cap-line"></i> LLB | Commercial &amp; Property Law</div>
                 </div>
             </div>
         </div>
