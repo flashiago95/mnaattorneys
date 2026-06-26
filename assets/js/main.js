@@ -71,7 +71,8 @@
         });
 
         /* Swiper Dynamic Slider — handles all Bustar data attributes */
-        $('.rs-swiper .swiper').each(function (index) {
+        /* Skip .rs-testimonial-slider-wrapper .swiper — handled by inline script */
+        $('.rs-swiper .swiper, .swiper[data-item]').not('.rs-testimonial-slider-wrapper .swiper').each(function (index) {
             var $swiper = $(this);
             var loop = $swiper.data('loop') !== false;
             var autoplayData = $swiper.data('autoplay');

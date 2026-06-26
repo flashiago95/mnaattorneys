@@ -2131,26 +2131,42 @@ document.getElementById('rsMobileClose').addEventListener('click', () =>
 function closeMobileNav() { document.getElementById('rsMobileNav').classList.remove('open'); }
 
 // ============================================================
-// TESTIMONIAL SLIDER
+// TESTIMONIAL SWIPER — direct init, bypasses main.js detection
 // ============================================================
-(function () {
-    const track = document.getElementById('rsTestiTrack');
-    const prev = document.getElementById('rsTestiPrev');
-    const next = document.getElementById('rsTestiNext');
-    if (!track) return;
-    let idx = 0;
-    const cards = track.querySelectorAll('.rs-testi-card');
-    const vis = () => window.innerWidth < 768 ? 1 : 2;
-    const maxIdx = () => cards.length - vis();
-    function move() {
-        const w = track.parentElement.offsetWidth;
-        const gap = 20;
-        const cw = (w - gap) / vis();
-        track.style.transform = `translateX(-${idx * (cw + gap)}px)`;
+(function() {
+    function initTestiSwiper() {
+        if (typeof Swiper === 'undefined') {
+            setTimeout(initTestiSwiper, 100);
+            return;
+        }
+        var el = document.querySelector('.rs-testimonial-slider-wrapper .swiper');
+        if (!el) return;
+
+        // Already initialised
+        if (el.swiper) return;
+
+        new Swiper(el, {
+            loop: true,
+            speed: 1500,
+            autoplay: { delay: 2000, disableOnInteraction: false },
+            slidesPerView: 1,
+            spaceBetween: 30,
+            grabCursor: true,
+            breakpoints: {
+                576:  { slidesPerView: 1,  spaceBetween: 20 },
+                768:  { slidesPerView: 2,  spaceBetween: 30 },
+                992:  { slidesPerView: 2,  spaceBetween: 30 },
+                1200: { slidesPerView: 2,  spaceBetween: 30 },
+                1400: { slidesPerView: 3,  spaceBetween: 30 }
+            }
+        });
     }
-    if (next) next.addEventListener('click', () => { if (idx < maxIdx()) { idx++; move(); } });
-    if (prev) prev.addEventListener('click', () => { if (idx > 0) { idx--; move(); } });
-    window.addEventListener('resize', move);
+    // Wait for DOM + Swiper CDN
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTestiSwiper);
+    } else {
+        initTestiSwiper();
+    }
 })();
 
 // ============================================================
