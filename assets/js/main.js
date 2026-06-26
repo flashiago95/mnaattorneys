@@ -70,44 +70,58 @@
             meanExpand: ['<i class="ri-add-large-line"></i>'],
         });
 
-        /* Swiper Dynamic Slider */
+        /* Swiper Dynamic Slider — handles all Bustar data attributes */
         $('.rs-swiper .swiper').each(function (index) {
             var $swiper = $(this);
-            var loop = $swiper.data('loop') === undefined ? true : $swiper.data('loop');
-            var autoplay = $swiper.data('autoplay') === undefined ? true : $swiper.data('autoplay');
-            var slidesPerView = $swiper.data('item');
-            var margin = ($swiper.data('margin') ? $swiper.data('margin') : 30);
-            var effect = $swiper.data('effect') || 'slide';
-            var speed = $swiper.data('speed') || 500;
+            var loop = $swiper.data('loop') !== false;
+            var autoplayData = $swiper.data('autoplay');
+            var autoplay = autoplayData !== false && autoplayData !== 'false'
+                ? { delay: ($swiper.data('delay') ? parseInt($swiper.data('delay')) : 3000), disableOnInteraction: false }
+                : false;
+            var slidesPerView = parseInt($swiper.data('item')) || 1;
+            var margin = parseInt($swiper.data('margin') || $swiper.data('margin-xl') || 30);
+            var effectVal = $swiper.data('effect');
+            var effect = (effectVal && effectVal !== 'false') ? effectVal : 'slide';
+            var speed = parseInt($swiper.data('speed')) || 700;
 
-            var rsNavPrev = `rs-nav-prev-${index}`;
-            var rsNavNext = `rs-nav-next-${index}`;
+            var rsNavPrev = 'rs-nav-prev-' + index;
+            var rsNavNext = 'rs-nav-next-' + index;
             $swiper.closest('.rs-swiper').find('.swiper-button-prev').addClass(rsNavPrev);
             $swiper.closest('.rs-swiper').find('.swiper-button-next').addClass(rsNavNext);
-            var rsPagination = `rs-pagination-${index}`;
+            var rsPagination = 'rs-pagination-' + index;
             $swiper.closest('.rs-swiper').find('.swiper-pagination').addClass(rsPagination);
+
+            // Read all breakpoint values
+            var itemXs  = parseInt($swiper.data('item-xs'))  || 1;
+            var itemSm  = parseInt($swiper.data('item-sm'))  || itemXs;
+            var itemMd  = parseInt($swiper.data('item-md'))  || 2;
+            var itemLg  = parseInt($swiper.data('item-lg'))  || itemMd;
+            var itemXl  = parseInt($swiper.data('item-xl'))  || itemLg;
+            var marginXl = parseInt($swiper.data('margin-xl')) || margin;
 
             var swiper = new Swiper(this, {
                 loop: loop,
                 autoplay: autoplay,
                 effect: effect,
-                slidesPerView: (slidesPerView ? slidesPerView : 1),
+                slidesPerView: itemXs,
                 spaceBetween: margin,
                 speed: speed,
                 grabCursor: true,
-                pagination: { el: `.${rsPagination}`, dynamicBullets: true, clickable: true },
-                navigation: { nextEl: `.${rsNavPrev}`, prevEl: `.${rsNavNext}` },
+                watchOverflow: false,
+                pagination: { el: '.' + rsPagination, dynamicBullets: ($swiper.data('dots-dynamic') !== false), clickable: true },
+                navigation: { nextEl: '.' + rsNavPrev, prevEl: '.' + rsNavNext },
                 breakpoints: {
-                    481:  { slidesPerView: ($swiper.data('item-xs') ? $swiper.data('item-xs') : 1), spaceBetween: margin },
-                    576:  { slidesPerView: ($swiper.data('item-sm') ? $swiper.data('item-sm') : 1), spaceBetween: margin },
-                    768:  { slidesPerView: ($swiper.data('item-md') ? $swiper.data('item-md') : 1), spaceBetween: margin },
-                    992:  { slidesPerView: ($swiper.data('item-lg') ? $swiper.data('item-lg') : 1), spaceBetween: margin },
-                    1201: { slidesPerView: (slidesPerView ? slidesPerView : 1), spaceBetween: margin },
+                    480:  { slidesPerView: itemXs, spaceBetween: margin },
+                    576:  { slidesPerView: itemSm, spaceBetween: margin },
+                    768:  { slidesPerView: itemMd, spaceBetween: margin },
+                    992:  { slidesPerView: itemLg, spaceBetween: margin },
+                    1200: { slidesPerView: itemXl, spaceBetween: marginXl },
+                    1400: { slidesPerView: slidesPerView, spaceBetween: marginXl },
                 }
             });
             if (autoplay) {
-                $swiper.on('mouseenter', function () { swiper.autoplay.stop(); })
-                       .on('mouseleave', function () { swiper.autoplay.start(); });
+                $swiper.on('mouseenter', function () { if (swiper.autoplay) swiper.autoplay.stop(); })
+                       .on('mouseleave', function () { if (swiper.autoplay) swiper.autoplay.start(); });
             }
         });
 
