@@ -277,13 +277,30 @@
     }
     .rs-hero-bg {
         position: absolute; inset: 0; z-index: 0;
-        background: url('assets/images/hero-bg.webp') center center / cover no-repeat;
     }
     .rs-hero-bg::before {
         content: ''; position: absolute; inset: 0;
         background: linear-gradient(105deg, rgba(20,27,35,0.94) 0%, rgba(28,37,48,0.85) 50%, rgba(40,52,62,0.7) 100%);
         z-index: 1;
     }
+    /* Each slide has its own background image */
+    .rs-hero-slide-1 .rs-hero-body::before,
+    .rs-hero-slide-2 .rs-hero-body::before,
+    .rs-hero-slide-3 .rs-hero-body::before {
+        content: ''; position: absolute;
+        inset: 0; z-index: -1;
+        background-size: cover; background-position: center;
+    }
+    .rs-hero-slide-1 { background: url('assets/images/hero-bg-1.webp') center/cover no-repeat; }
+    .rs-hero-slide-2 { background: url('assets/images/hero-bg-2.webp') center/cover no-repeat; }
+    .rs-hero-slide-3 { background: url('assets/images/hero-bg-3.webp') center/cover no-repeat; }
+    /* Dark overlay on each slide */
+    .rs-hero-slide::before {
+        content: ''; position: absolute; inset: 0;
+        background: linear-gradient(105deg, rgba(18,25,33,0.96) 0%, rgba(28,37,48,0.9) 55%, rgba(40,52,62,0.75) 100%);
+        z-index: 1;
+    }
+    .rs-hero-slide .rs-hero-body { position: relative; z-index: 2; }
     .rs-hero-bg-img {
         position: absolute; inset: 0;
         width: 100%; height: 100%;
@@ -1299,7 +1316,7 @@
     <div class="rs-hero-slides">
 
         <!-- SLIDE 1 -->
-        <div class="rs-hero-slide active">
+        <div class="rs-hero-slide rs-hero-slide-1 active">
             <div class="rs-hero-body">
                 <div class="rs-hero-left">
                     <p class="rs-hero-subtitle">Mdyesha Ndema Attorneys</p>
@@ -1336,7 +1353,7 @@
         </div>
 
         <!-- SLIDE 2 -->
-        <div class="rs-hero-slide">
+        <div class="rs-hero-slide rs-hero-slide-2">
             <div class="rs-hero-body">
                 <div class="rs-hero-left">
                     <p class="rs-hero-subtitle">Corporate &amp; Commercial Law</p>
@@ -1373,7 +1390,7 @@
         </div>
 
         <!-- SLIDE 3 -->
-        <div class="rs-hero-slide">
+        <div class="rs-hero-slide rs-hero-slide-3">
             <div class="rs-hero-body">
                 <div class="rs-hero-left">
                     <p class="rs-hero-subtitle">100% Black-Owned &bull; Level 1 BBBEE</p>
