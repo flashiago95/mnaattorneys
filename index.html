@@ -573,17 +573,34 @@
     }
     .rs-services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
     .rs-service-card {
-        background: var(--rs-white); padding: 38px 34px;
-        position: relative; overflow: hidden; transition: var(--rs-transition); cursor: pointer;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-color: var(--rs-white);
+        padding: 38px 34px;
+        overflow: hidden;
+        transition: var(--rs-transition);
+        cursor: pointer;
     }
+    .rs-service-card::after {
+        content: '';
+        position: absolute; inset: 0;
+        background: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.97) 55%, rgba(255,255,255,1) 100%);
+        z-index: 0;
+        transition: var(--rs-transition);
+    }
+    .rs-service-card:hover::after {
+        background: linear-gradient(180deg, rgba(43,57,68,0.93) 0%, rgba(43,57,68,0.96) 55%, rgba(43,57,68,1) 100%);
+    }
+    .rs-service-card > * { position: relative; z-index: 1; }
     .rs-service-card::before {
         content: ''; position: absolute; top: 0; left: 0;
         width: 100%; height: 3px; background: var(--rs-theme-primary);
         transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
+        z-index: 2;
     }
     .rs-service-card:hover::before { transform: scaleX(1); }
-    .rs-service-card:hover { background: var(--rs-secondary); }
-    .rs-service-card:hover .rs-svc-num { color: rgba(255,255,255,0.06); }
+    .rs-service-card:hover .rs-svc-num { color: rgba(255,255,255,0.1); }
     .rs-service-card:hover .rs-svc-name { color: var(--rs-white); }
     .rs-service-card:hover .rs-svc-desc { color: rgba(255,255,255,0.5); }
     .rs-service-card:hover .rs-svc-icon { background: rgba(171,5,45,0.18); }
@@ -854,13 +871,14 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0;
-        align-items: center;
+        align-items: start;
         position: relative;
         z-index: 1;
     }
     /* Left: editorial header */
     .rs-sectors-left {
         padding-right: 80px;
+        padding-top: 60px;
     }
     .rs-sectors-overline {
         font-size: 11px; font-weight: 600;
@@ -891,6 +909,7 @@
     /* Right: numbered list on dark bg */
     .rs-sectors-right {
         padding: 60px 0 60px 60px;
+        align-self: stretch;
     }
     .rs-sector-row {
         display: flex; align-items: center;
@@ -1612,7 +1631,7 @@
         </div>
         <nav class="rs-main-nav multipage-menu">
             <a href="index.html" class="active">Home</a>
-            <a href="#rs-about">About</a>
+            <a href="about.html">About</a>
             <a href="#rs-services">Services</a>
             <a href="#rs-team">Our Team</a>
             <a href="#rs-faq">FAQ</a>
@@ -1631,7 +1650,7 @@
 <div class="rs-mobile-nav-wrap" id="rsMobileNav">
     <button class="rs-mobile-close" id="rsMobileClose"><i class="ri-close-line"></i></button>
     <a href="index.html" onclick="closeMobileNav()">Home</a>
-    <a href="#rs-about" onclick="closeMobileNav()">About MNA</a>
+    <a href="about.html" onclick="closeMobileNav()">About MNA</a>
     <a href="#rs-services" onclick="closeMobileNav()">Our Services</a>
     <a href="#rs-team" onclick="closeMobileNav()">Our Team</a>
     <a href="#rs-faq" onclick="closeMobileNav()">FAQ</a>
@@ -1667,7 +1686,6 @@
                     </div>
                 </div>
                 <div class="rs-hero-right">
-                    <div class="rs-hero-watermark">MNA</div>
                     <div class="rs-hero-service-list">
                         <a class="rs-hs-item" href="#rs-services">
                             <div class="rs-hs-left"><span class="rs-hs-num">01</span><span class="rs-hs-title">Commercial &amp; Corporate Law</span></div>
@@ -1704,7 +1722,6 @@
                     </div>
                 </div>
                 <div class="rs-hero-right">
-                    <div class="rs-hero-watermark">LAW</div>
                     <div class="rs-hero-service-list">
                         <a class="rs-hs-item" href="#rs-services">
                             <div class="rs-hs-left"><span class="rs-hs-num">01</span><span class="rs-hs-title">Mergers &amp; Acquisitions</span></div>
@@ -1741,7 +1758,6 @@
                     </div>
                 </div>
                 <div class="rs-hero-right">
-                    <div class="rs-hero-watermark">MNA</div>
                     <div class="rs-hero-service-list">
                         <a class="rs-hs-item" href="#rs-services">
                             <div class="rs-hs-left"><span class="rs-hs-num">01</span><span class="rs-hs-title">Entertainment &amp; Sports Law</span></div>
@@ -1838,42 +1854,42 @@
             <p class="rs-section-body wow fadeInUp" data-wow-delay="0.2s" style="max-width:340px">From commercial transactions to property transfers — we cover the full spectrum of your legal needs.</p>
         </div>
         <div class="rs-services-grid gsap-stagger-parent">
-            <div class="rs-service-card gsap-stagger-child">
+            <div class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=70')">
                 <div class="rs-svc-num">01</div>
                 <div class="rs-svc-icon"><i class="ri-briefcase-4-line"></i></div>
                 <h3 class="rs-svc-name">Commercial &amp; Corporate Law</h3>
                 <p class="rs-svc-desc">Mergers, acquisitions, due diligence, BEE transactions, joint ventures, and commercial contracts handled at the highest level.</p>
                 <i class="ri-arrow-right-line rs-svc-arrow"></i>
             </div>
-            <div class="rs-service-card gsap-stagger-child">
+            <div class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=70')">
                 <div class="rs-svc-num">02</div>
                 <div class="rs-svc-icon"><i class="ri-government-line"></i></div>
                 <h3 class="rs-svc-name">Company Secretarial &amp; Governance</h3>
                 <p class="rs-svc-desc">Board compliance, CIPC filings, King IV advisory, risk management, and full corporate governance support.</p>
                 <i class="ri-arrow-right-line rs-svc-arrow"></i>
             </div>
-            <div class="rs-service-card gsap-stagger-child">
+            <div class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=70')">
                 <div class="rs-svc-num">03</div>
                 <div class="rs-svc-icon"><i class="ri-home-4-line"></i></div>
                 <h3 class="rs-svc-name">Property Law &amp; Conveyancing</h3>
                 <p class="rs-svc-desc">Property transfers, bond registrations, sectional title, township proclamation, evictions, and lease agreements.</p>
                 <i class="ri-arrow-right-line rs-svc-arrow"></i>
             </div>
-            <div class="rs-service-card gsap-stagger-child">
+            <div class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=600&q=70')">
                 <div class="rs-svc-num">04</div>
                 <div class="rs-svc-icon"><i class="ri-scales-3-line"></i></div>
                 <h3 class="rs-svc-name">Litigation</h3>
                 <p class="rs-svc-desc">Commercial, civil, and labour disputes — from debt collection to High Court proceedings, interdicts, and enforcement.</p>
                 <i class="ri-arrow-right-line rs-svc-arrow"></i>
             </div>
-            <div class="rs-service-card gsap-stagger-child">
+            <div class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=600&q=70')">
                 <div class="rs-svc-num">05</div>
                 <div class="rs-svc-icon"><i class="ri-music-2-line"></i></div>
                 <h3 class="rs-svc-name">Entertainment &amp; Sports Law</h3>
                 <p class="rs-svc-desc">Artist and athlete representation, sponsorship agreements, music production contracts, film financing, and copyright matters.</p>
                 <i class="ri-arrow-right-line rs-svc-arrow"></i>
             </div>
-            <div class="rs-service-card gsap-stagger-child">
+            <div class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=70')">
                 <div class="rs-svc-num">06</div>
                 <div class="rs-svc-icon"><i class="ri-user-3-line"></i></div>
                 <h3 class="rs-svc-name">Labour &amp; Employment Law</h3>
