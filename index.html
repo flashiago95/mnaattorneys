@@ -291,9 +291,9 @@
         inset: 0; z-index: -1;
         background-size: cover; background-position: center;
     }
-    .rs-hero-slide-1 { background: url('assets/images/hero-bg-1.webp') center/cover no-repeat; }
-    .rs-hero-slide-2 { background: url('assets/images/hero-bg-2.webp') center/cover no-repeat; }
-    .rs-hero-slide-3 { background: url('assets/images/hero-bg-3.webp') center/cover no-repeat; }
+    .rs-hero-slide-1 { background: #D1D5DB url('assets/images/hero-bg-1.webp') center/cover no-repeat; }
+    .rs-hero-slide-2 { background: #D1D5DB url('assets/images/hero-bg-2.webp') center/cover no-repeat; }
+    .rs-hero-slide-3 { background: #D1D5DB url('assets/images/hero-bg-3.webp') center/cover no-repeat; }
     /* Dark overlay on each slide */
     .rs-hero-slide::before {
         content: ''; position: absolute; inset: 0;
@@ -803,7 +803,7 @@
     /* ============================================================
        FAQ
     ============================================================ */
-    .rs-faq-section { background: #1a2230; padding: var(--rs-section-gap) 0; }
+    .rs-faq-section { background: #121213; padding: var(--rs-section-gap) 0; }
     .rs-faq-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: start; }
     .rs-faq-label { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 14px; display: block; }
     .rs-faq-title { font-size: clamp(26px,3vw,46px); font-weight: 700; color: var(--rs-white); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 18px; }
@@ -879,23 +879,30 @@
     .rs-sectors-left {
         padding-right: 80px;
         padding-top: 60px;
+        text-align: left;
     }
+    .rs-sectors-left * { text-align: left; }
     .rs-sectors-overline {
         font-size: 11px; font-weight: 600;
         letter-spacing: 0.16em; text-transform: uppercase;
         color: var(--rs-theme-primary); margin-bottom: 14px;
         display: block;
+        text-align: left;
     }
     .rs-sectors-title {
         font-size: clamp(30px, 3.5vw, 52px);
         font-weight: 700; color: var(--rs-secondary);
         line-height: 1.1; letter-spacing: -0.022em;
         margin-bottom: 20px;
+        text-align: left;
     }
     .rs-sectors-desc {
         font-size: 16px; line-height: 1.7;
         color: var(--rs-text-body);
         margin-bottom: 36px;
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
     }
     .rs-sectors-cta {
         display: inline-flex; align-items: center; gap: 10px;
@@ -1139,7 +1146,7 @@
     /* ============================================================
        FAQ
     ============================================================ */
-    .rs-faq-section { background: #1a2230; padding: var(--rs-section-gap) 0; }
+    .rs-faq-section { background: #121213; padding: var(--rs-section-gap) 0; }
     .rs-faq-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: start; }
     .rs-faq-label { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 14px; display: block; }
     .rs-faq-title { font-size: clamp(26px,3vw,46px); font-weight: 700; color: var(--rs-white); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 18px; }
@@ -1835,7 +1842,7 @@
                 </a>
             </div>
             <div class="wow fadeInRight" data-wow-delay="0.2s">
-                <img class="rs-about-img" src="assets/images/about.jpg" alt="MNA Attorneys Directors" onerror="this.src='https://placehold.co/640x480/2B3944/ffffff?text=MNA+Attorneys'">
+                <img class="rs-about-img" src="assets/images/about.jpg" alt="MNA Attorneys Directors" onerror="this.src='https://placehold.co/640x480/E5E7EB/E5E7EB'">
             </div>
         </div>
     </div>
@@ -2039,7 +2046,7 @@
     <div class="container">
         <div class="rs-why-grid">
             <div class="rs-image scroll_reveal wow fadeInLeft" data-dir="reveal_left">
-                <img class="rs-why-img" src="assets/images/why-mna.jpg" alt="MNA Attorneys team" onerror="this.src='https://placehold.co/620x520/2B3944/ffffff?text=MNA+Team'">
+                <img class="rs-why-img" src="assets/images/why-mna.jpg" alt="MNA Attorneys team" onerror="this.src='https://placehold.co/620x520/E5E7EB/E5E7EB'">
             </div>
             <div class="wow fadeInRight" data-wow-delay="0.15s">
                 <div class="rs-section-label">Easy Steps to Legal Success</div>
@@ -2083,7 +2090,7 @@
             <div class="col-xxl-4 col-xl-5 col-lg-5">
                 <div class="rs-testimonial-thumb">
                     <img src="assets/images/testi-thumb.webp" alt="Client testimonials"
-                         onerror="this.src='https://placehold.co/384x637/2B3944/ffffff?text=Clients'">
+                         onerror="this.src='https://placehold.co/384x637/E5E7EB/E5E7EB'">
                 </div>
             </div>
             <div class="col-xxl-8 col-xl-7 col-lg-7">
@@ -2250,7 +2257,7 @@
         </div>
         <div class="rs-team-grid gsap-stagger-parent">
             <div class="rs-team-card gsap-stagger-child wow fadeInUp" data-wow-delay="0.1s">
-                <img class="rs-team-card-img" src="assets/images/team-sibongile.jpg" alt="Sibongile Mdyesha" onerror="this.src='https://placehold.co/700x900/2B3944/ffffff?text=Sibongile+Mdyesha'">
+                <img class="rs-team-card-img" src="assets/images/team-sibongile.jpg" alt="Sibongile Mdyesha" onerror="this.src='https://placehold.co/700x900/E5E7EB/E5E7EB'">
                 <div class="rs-team-card-overlay">
                     <div class="rs-team-role">Co-Founder &amp; Chairman</div>
                     <div class="rs-team-name">Sibongile Mdyesha</div>
@@ -2258,7 +2265,7 @@
                 </div>
             </div>
             <div class="rs-team-card gsap-stagger-child wow fadeInUp" data-wow-delay="0.2s">
-                <img class="rs-team-card-img" src="assets/images/team-mande.jpg" alt="Mande Ndema" onerror="this.src='https://placehold.co/700x900/1c2530/ffffff?text=Mande+Ndema'">
+                <img class="rs-team-card-img" src="assets/images/team-mande.jpg" alt="Mande Ndema" onerror="this.src='https://placehold.co/700x900/E5E7EB/E5E7EB'">
                 <div class="rs-team-card-overlay">
                     <div class="rs-team-role">Co-Founder &amp; CEO</div>
                     <div class="rs-team-name">Mande Ndema</div>
@@ -2266,7 +2273,7 @@
                 </div>
             </div>
             <div class="rs-team-card gsap-stagger-child wow fadeInUp" data-wow-delay="0.3s">
-                <img class="rs-team-card-img" src="assets/images/team-masibonge.jpg" alt="Masibonge Mzwakali" onerror="this.src='https://placehold.co/700x900/121213/ffffff?text=Masibonge+Mzwakali'">
+                <img class="rs-team-card-img" src="assets/images/team-masibonge.jpg" alt="Masibonge Mzwakali" onerror="this.src='https://placehold.co/700x900/E5E7EB/E5E7EB'">
                 <div class="rs-team-card-overlay">
                     <div class="rs-team-role">Director</div>
                     <div class="rs-team-name">Masibonge Mzwakali</div>
