@@ -287,3 +287,7 @@ h1, h2 {
 
 .mna-area-cta { display: inline-block; margin-top: 6px; color: var(--mna-claret); font-weight: 600; font-size: 14px; border-bottom: 1px solid transparent; }
 .mna-area-cta:hover { color: var(--mna-claret-deep); border-bottom-color: currentColor; }
+
+/* Anchor targets clear the sticky header */
+section[id], article[id], div[id] { scroll-margin-top: 90px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto !important; } }
