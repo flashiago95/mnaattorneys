@@ -472,3 +472,6 @@ a:hover .mna-arrow { transform: translateX(4px); }
     .mna-press-contact { padding: 32px 24px; }
     .mna-press-feature-mark { aspect-ratio: 16 / 9; }
 }
+
+/* Homepage offices sit directly under the paper-coloured enquiry section */
+.mna-offices--home { border-top: 1px solid var(--mna-rule); }
