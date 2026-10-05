@@ -658,8 +658,10 @@ a:hover .mna-arrow { transform: translateX(4px); }
     background-repeat: no-repeat; background-size: cover; background-position: center;
     left: 35%;
 }
-.mna-ph--about::before    { background-image: url('../images/about.jpg'); background-position: center 30%; }
-.mna-ph--services::before { background-image: url('../images/services-hero.jpg'); background-position: center 38%; }
+.mna-ph--about::before    { background-image: url('../images/about-hero.jpg'); background-position: right 22%; left: 0; }
+.mna-ph--about::after { background: linear-gradient(90deg, #1b2229 0%, rgba(27,34,41,.94) 30%, rgba(27,34,41,.6) 52%, rgba(27,34,41,.12) 75%, rgba(27,34,41,0) 100%), linear-gradient(0deg, rgba(27,34,41,.45) 0%, transparent 45%); }
+.mna-ph--services::before { background-image: url('../images/services-hero.jpg'); background-position: right 38%; left: 0; }
+.mna-ph--services::after { background: linear-gradient(90deg, #1b2229 0%, rgba(27,34,41,.9) 28%, rgba(27,34,41,.45) 55%, rgba(27,34,41,.05) 80%, rgba(27,34,41,0) 100%), linear-gradient(0deg, rgba(27,34,41,.4) 0%, transparent 45%); }
 .mna-ph--team::before     { background-image: url('../images/team-hero.jpg'); background-position: center 32%; left: 40%; }
 .mna-ph--team::after { background: linear-gradient(90deg, #1b2229 0%, #1b2229 38%, rgba(27,34,41,.55) 46%, rgba(27,34,41,.15) 60%, rgba(27,34,41,.1) 100%), linear-gradient(0deg, rgba(27,34,41,.5) 0%, transparent 45%); }
 .mna-ph--press::before    { background-image: url('../images/hero-bg-2.webp'); background-position: 20% 40%; }
