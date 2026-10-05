@@ -126,21 +126,8 @@
             }
         });
 
-        /* Smooth Scrolling — Lenis */
-        if ($('.rs-smoother-yes').length) {
-            const lenis = new Lenis({ smoothWheel: true, wheelMultiplier: 1.2, duration: 1.5, lerp: 0.1 });
-            function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-            requestAnimationFrame(raf);
-            document.querySelectorAll('a[href^="#"]').forEach((el) => {
-                el.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const id = el.getAttribute('href')?.slice(1);
-                    if (!id) return;
-                    const target = document.getElementById(id);
-                    if (target) { lenis.scrollTo(target); }
-                });
-            });
-        }
+        /* Scrolling is left to the browser (smooth anchor jumps come from CSS).
+           A JS wheel-smoothing library here fought the native scroll and made it lag. */
 
         /* Footer year */
         var yearEl = document.getElementById("year");
