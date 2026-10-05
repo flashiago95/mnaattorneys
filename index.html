@@ -1642,6 +1642,7 @@
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="index.html#rs-team">Our Team</a>
+            <a href="press.html">Press</a>
             <a href="contact.html">Contact</a>
         </nav>
         <div style="display:flex;align-items:center;gap:14px">
@@ -1660,6 +1661,7 @@
     <a href="about.html" onclick="closeMobileNav()">About MNA</a>
     <a href="services.html" onclick="closeMobileNav()">Services</a>
     <a href="index.html#rs-team" onclick="closeMobileNav()">Our Team</a>
+    <a href="press.html" onclick="closeMobileNav()">Press</a>
     <a href="contact.html" onclick="closeMobileNav()">Contact</a>
     <a href="tel:0115133387" style="color:#AB052D;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1)">
         <i class="ri-phone-line"></i> 011 513 3387
@@ -1823,26 +1825,24 @@
 <!-- ============================================================
      ABOUT
 ============================================================ -->
-<section class="rs-about-section" id="rs-about">
+<section class="mna-about" id="rs-about">
     <div class="container">
-        <div class="rs-about-grid">
-            <div class="wow fadeInLeft" data-wow-delay="0.1s">
-                <span class="rs-about-label">Welcome to MNA Attorneys</span>
-                <h2 class="rs-about-title rs-split-text-enable split-in-up">Driving excellence through strategic legal expertise</h2>
-                <div class="rs-about-meta">
-                    <div class="rs-counter-wrap">
-                        <div class="rs-counter-static">30<sup>+</sup></div>
-                    </div>
-                    <div class="rs-counter-label">Years Of<br>Experience</div>
-                    <p class="rs-about-body">MNA was founded by practitioners who've worked inside the corporate world as in-house legal advisers at Standard Bank, Land Bank, Sanlam, and JSE-listed companies. We understand what your business actually needs, not just what the law requires.</p>
-                </div>
-                <a href="about.html" class="rs-btn-pill-dark" style="margin-top:28px;display:inline-flex">
-                    Our story <i class="ri-arrow-right-up-line"></i>
-                </a>
+        <div class="mna-about-grid">
+            <div class="mna-about-copy wow fadeInUp">
+                <div class="rs-section-label">Welcome to MNA Attorneys</div>
+                <h2 class="mna-about-title">Corporate counsel from lawyers who have worked <em>inside</em> the boardroom.</h2>
+                <p class="mna-about-lead">MNA was founded by practitioners who served as in-house legal advisers at Standard Bank, Land Bank, Sanlam and JSE-listed companies. We understand what your business actually needs, not just what the law requires.</p>
+                <dl class="mna-stats">
+                    <div><dt>30+</dt><dd>Years of combined experience</dd></div>
+                    <div><dt>2</dt><dd>Offices, Johannesburg &amp; East London</dd></div>
+                    <div><dt>L1</dt><dd>BBBEE contributor, 100% Black-owned</dd></div>
+                </dl>
+                <a href="about.html" class="mna-link-btn">Read our story <svg class="mna-arrow" width="16" height="10" viewBox="0 0 16 10" aria-hidden="true"><path d="M0 5h14M10 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
             </div>
-            <div class="wow fadeInRight" data-wow-delay="0.2s">
-                <img class="rs-about-img" src="assets/images/about.jpg" alt="MNA Attorneys Directors" onerror="this.src='https://placehold.co/640x480/E5E7EB/E5E7EB'">
-            </div>
+            <figure class="mna-about-figure wow fadeInUp" data-wow-delay="0.15s">
+                <img src="assets/images/about.jpg" alt="MNA Attorneys directors" onerror="this.src='https://placehold.co/640x480/E5E7EB/E5E7EB'">
+                <figcaption><span>Est. 2010</span>Johannesburg &middot; East London</figcaption>
+            </figure>
         </div>
     </div>
 </section>
@@ -1910,130 +1910,70 @@
 </section>
 
 <!-- ============================================================
-     SECTORS — Diagonal split, editorial list
+     WHO WE SERVE
 ============================================================ -->
-<section class="rs-sectors-section" id="rs-sectors">
+<section class="mna-serve" id="rs-sectors">
     <div class="container">
-        <div class="rs-sectors-inner">
-
-            <!-- Left: header copy -->
-            <div class="rs-sectors-left wow fadeInLeft">
-                <span class="rs-sectors-overline">Who We Serve</span>
-                <h2 class="rs-sectors-title">Sectors We<br>Serve</h2>
-                <p class="rs-sectors-desc">From JSE-listed companies to government departments, our work spans the full breadth of South African industry, public sector, and private practice.</p>
-                <a href="services.html" class="rs-sectors-cta">
-                    View Our Services <i class="ri-arrow-right-line"></i>
-                </a>
+        <div class="mna-serve-head wow fadeInUp">
+            <div>
+                <div class="rs-section-label">Who we serve</div>
+                <h2>Sectors we serve</h2>
             </div>
-
-            <!-- Right: numbered list on dark background -->
-            <div class="rs-sectors-right wow fadeInRight" data-wow-delay="0.1s">
-                <div class="rs-sector-row">
-                    <span class="rs-sector-row-num">01</span>
-                    <div class="rs-sector-row-line"></div>
-                    <span class="rs-sector-row-name">Corporates &amp; JSE-Listed Entities</span>
-                    <div class="rs-sector-row-icon"><i class="ri-arrow-right-up-line"></i></div>
-                </div>
-                <div class="rs-sector-row">
-                    <span class="rs-sector-row-num">02</span>
-                    <div class="rs-sector-row-line"></div>
-                    <span class="rs-sector-row-name">Government Departments</span>
-                    <div class="rs-sector-row-icon"><i class="ri-arrow-right-up-line"></i></div>
-                </div>
-                <div class="rs-sector-row">
-                    <span class="rs-sector-row-num">03</span>
-                    <div class="rs-sector-row-line"></div>
-                    <span class="rs-sector-row-name">Parastatals &amp; State-Owned Entities</span>
-                    <div class="rs-sector-row-icon"><i class="ri-arrow-right-up-line"></i></div>
-                </div>
-                <div class="rs-sector-row">
-                    <span class="rs-sector-row-num">04</span>
-                    <div class="rs-sector-row-line"></div>
-                    <span class="rs-sector-row-name">Development Finance Institutions</span>
-                    <div class="rs-sector-row-icon"><i class="ri-arrow-right-up-line"></i></div>
-                </div>
-                <div class="rs-sector-row">
-                    <span class="rs-sector-row-num">05</span>
-                    <div class="rs-sector-row-line"></div>
-                    <span class="rs-sector-row-name">Property Developers &amp; Investors</span>
-                    <div class="rs-sector-row-icon"><i class="ri-arrow-right-up-line"></i></div>
-                </div>
-                <div class="rs-sector-row">
-                    <span class="rs-sector-row-num">06</span>
-                    <div class="rs-sector-row-line"></div>
-                    <span class="rs-sector-row-name">Entertainment, Sports &amp; Media</span>
-                    <div class="rs-sector-row-icon"><i class="ri-arrow-right-up-line"></i></div>
-                </div>
-                <div class="rs-sector-row">
-                    <span class="rs-sector-row-num">07</span>
-                    <div class="rs-sector-row-line"></div>
-                    <span class="rs-sector-row-name">SMEs &amp; Entrepreneurs</span>
-                    <div class="rs-sector-row-icon"><i class="ri-arrow-right-up-line"></i></div>
-                </div>
-                <div class="rs-sector-row">
-                    <span class="rs-sector-row-num">08</span>
-                    <div class="rs-sector-row-line"></div>
-                    <span class="rs-sector-row-name">Private Clients &amp; High-Net-Worth Individuals</span>
-                    <div class="rs-sector-row-icon"><i class="ri-arrow-right-up-line"></i></div>
-                </div>
+            <div class="mna-serve-intro">
+                <p>From JSE-listed companies to government departments, our work spans South African industry, the public sector and private clients.</p>
+                <a href="services.html" class="mna-btn mna-btn--light">View our services <svg class="mna-arrow" width="16" height="10" viewBox="0 0 16 10" aria-hidden="true"><path d="M0 5h14M10 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
             </div>
         </div>
+        <ul class="mna-serve-list wow fadeInUp" data-wow-delay="0.1s">
+                <li><i class="ri-building-4-line"></i><span>Corporates &amp; JSE-listed entities</span></li>
+                <li><i class="ri-government-line"></i><span>Government departments</span></li>
+                <li><i class="ri-flashlight-line"></i><span>Parastatals &amp; state-owned entities</span></li>
+                <li><i class="ri-bank-line"></i><span>Development finance institutions</span></li>
+                <li><i class="ri-community-line"></i><span>Property developers &amp; investors</span></li>
+                <li><i class="ri-mic-line"></i><span>Entertainment, sports &amp; media</span></li>
+                <li><i class="ri-store-2-line"></i><span>SMEs &amp; entrepreneurs</span></li>
+                <li><i class="ri-user-star-line"></i><span>Private clients</span></li>
+        </ul>
     </div>
 </section>
 
 <!-- ============================================================
-     CORE FEATURES (parallax bg + 3 col)
+     PRACTICE OVERVIEW
 ============================================================ -->
-<section class="rs-features-section">
-    <div class="rs-features-bg">
-        <img class="rs-features-bg-img" src="assets/images/features-bg.jpg" alt="" onerror="this.style.display='none'">
-        <div class="rs-features-bg-content wow fadeInUp">
-            <span class="rs-features-bg-label">Explore Our Core Practice Areas</span>
-            <h2 class="rs-features-bg-title rs-split-text-enable split-in-up">Counsel shaped by years<br>inside the businesses we advise</h2>
+<section class="mna-pillars">
+    <div class="container">
+        <div class="mna-pillars-head wow fadeInUp">
+            <div class="rs-section-label">Our core practice</div>
+            <h2>Counsel shaped by years inside the businesses we advise</h2>
         </div>
-    </div>
-    <div class="rs-feature-cards gsap-stagger-parent">
-        <div class="rs-feature-card gsap-stagger-child wow fadeInUp" data-wow-delay="0.1s">
-            <div class="rs-fc-num">01<span></span></div>
-            <h3 class="rs-fc-title">Industries We Serve</h3>
-            <p class="rs-fc-desc">Helping corporates, public entities, and SMEs navigate complex legal landscapes with confidence and clarity.</p>
-            <div class="rs-fc-tags">
-                <span class="rs-fc-tag">Government</span>
-                <span class="rs-fc-tag">Property</span>
-                <span class="rs-fc-tag">Finance</span>
-                <span class="rs-fc-tag">Entertainment</span>
-                <span class="rs-fc-tag">Banking</span>
-                <span class="rs-fc-tag">Sport</span>
-            </div>
-            <a href="#rs-sectors" class="rs-fc-link">Explore Industries <i class="ri-arrow-right-up-line"></i></a>
-        </div>
-        <div class="rs-feature-card gsap-stagger-child wow fadeInUp" data-wow-delay="0.2s">
-            <div class="rs-fc-num">02<span></span></div>
-            <h3 class="rs-fc-title">Our Legal Services</h3>
-            <p class="rs-fc-desc">Expert counsel across the full spectrum of commercial, corporate, and personal legal matters.</p>
-            <div class="rs-fc-tags">
-                <span class="rs-fc-tag">Corporate Law</span>
-                <span class="rs-fc-tag">Litigation</span>
-                <span class="rs-fc-tag">Conveyancing</span>
-                <span class="rs-fc-tag">Labour Law</span>
-                <span class="rs-fc-tag">ICT Law</span>
-                <span class="rs-fc-tag">Governance</span>
-            </div>
-            <a href="services.html" class="rs-fc-link">Explore Services <i class="ri-arrow-right-up-line"></i></a>
-        </div>
-        <div class="rs-feature-card gsap-stagger-child wow fadeInUp" data-wow-delay="0.3s">
-            <div class="rs-fc-num">03<span></span></div>
-            <h3 class="rs-fc-title">Our Solutions</h3>
-            <p class="rs-fc-desc">Tailored, strategic, solution-orientated legal guidance aligned with your broader business objectives.</p>
-            <div class="rs-fc-tags">
-                <span class="rs-fc-tag">Strategy</span>
-                <span class="rs-fc-tag">Growth</span>
-                <span class="rs-fc-tag">Compliance</span>
-                <span class="rs-fc-tag">Risk</span>
-                <span class="rs-fc-tag">Advisory</span>
-                <span class="rs-fc-tag">Transactions</span>
-            </div>
-            <a href="contact.html" class="rs-fc-link">Talk to a director <i class="ri-arrow-right-up-line"></i></a>
+        <div class="mna-pillar-list wow fadeInUp" data-wow-delay="0.1s">
+            <a class="mna-pillar" href="#rs-sectors">
+                <span class="mna-pillar-no">I</span>
+                <div class="mna-pillar-main">
+                    <h3>Industries we serve</h3>
+                    <p>Corporates, public entities and growing businesses, guided through complex legal ground with clarity.</p>
+                </div>
+                <div class="mna-pillar-tags"><span>Government</span><span>Property</span><span>Finance</span><span>Banking</span><span>Entertainment</span><span>Sport</span></div>
+                <span class="mna-pillar-cta">See sectors <svg class="mna-arrow" width="16" height="10" viewBox="0 0 16 10" aria-hidden="true"><path d="M0 5h14M10 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span>
+            </a>
+            <a class="mna-pillar" href="services.html">
+                <span class="mna-pillar-no">II</span>
+                <div class="mna-pillar-main">
+                    <h3>Our legal services</h3>
+                    <p>Counsel across commercial, corporate and personal legal matters, run by a director from start to finish.</p>
+                </div>
+                <div class="mna-pillar-tags"><span>Corporate</span><span>Litigation</span><span>Conveyancing</span><span>Labour</span><span>ICT</span><span>Governance</span></div>
+                <span class="mna-pillar-cta">Explore services <svg class="mna-arrow" width="16" height="10" viewBox="0 0 16 10" aria-hidden="true"><path d="M0 5h14M10 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span>
+            </a>
+            <a class="mna-pillar" href="contact.html">
+                <span class="mna-pillar-no">III</span>
+                <div class="mna-pillar-main">
+                    <h3>How we advise</h3>
+                    <p>Strategic, practical guidance that is aligned with your wider business objectives, not just the legal question.</p>
+                </div>
+                <div class="mna-pillar-tags"><span>Strategy</span><span>Compliance</span><span>Risk</span><span>Transactions</span><span>Advisory</span></div>
+                <span class="mna-pillar-cta">Talk to a director <svg class="mna-arrow" width="16" height="10" viewBox="0 0 16 10" aria-hidden="true"><path d="M0 5h14M10 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span>
+            </a>
         </div>
     </div>
 </section>
@@ -2246,39 +2186,42 @@
 </section>
 
 <!-- ============================================================
-     TEAM
+     DIRECTORS
 ============================================================ -->
-<section class="rs-team-section" id="rs-team">
+<section class="mna-directors" id="rs-team">
     <div class="container">
-        <div class="rs-team-header">
-            <div class="rs-section-label wow fadeInUp">Our Leadership</div>
-            <h2 class="rs-section-title wow fadeInUp rs-split-text-enable split-in-up" data-wow-delay="0.1s">The Directors Behind <span>MNA</span></h2>
+        <div class="mna-directors-head wow fadeInUp">
+            <div>
+                <div class="rs-section-label">Our leadership</div>
+                <h2>The directors behind MNA</h2>
+            </div>
+            <a href="about.html#team" class="mna-link-btn">Full profiles <svg class="mna-arrow" width="16" height="10" viewBox="0 0 16 10" aria-hidden="true"><path d="M0 5h14M10 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
         </div>
-        <div class="rs-team-grid gsap-stagger-parent">
-            <div class="rs-team-card gsap-stagger-child wow fadeInUp" data-wow-delay="0.1s">
-                <img class="rs-team-card-img" src="assets/images/team-sibongile.jpg" alt="Sibongile Mdyesha" onerror="this.src='https://placehold.co/700x900/E5E7EB/E5E7EB'">
-                <div class="rs-team-card-overlay">
-                    <div class="rs-team-role">Co-Founder &amp; Chairman</div>
-                    <div class="rs-team-name">Sibongile Mdyesha</div>
-                    <div class="rs-team-qual"><i class="ri-graduation-cap-line"></i> LLB (UKZN) | HDip Tax (UCT) | MAP (Wits)</div>
+        <div class="mna-directors-grid">
+            <article class="mna-director wow fadeInUp" data-wow-delay="0.1s">
+                <div class="mna-director-photo"><img src="assets/images/team-sibongile.jpg" alt="Sibongile Mdyesha" loading="lazy" onerror="this.src='https://placehold.co/700x900/E5E7EB/E5E7EB'"></div>
+                <div class="mna-director-body">
+                    <p class="mna-director-role">Co-Founder &amp; Chairman</p>
+                    <h3>Sibongile Mdyesha</h3>
+                    <p class="mna-director-qual">LLB (UKZN) &middot; HDip Tax (UCT) &middot; MAP (Wits)</p>
                 </div>
-            </div>
-            <div class="rs-team-card gsap-stagger-child wow fadeInUp" data-wow-delay="0.2s">
-                <img class="rs-team-card-img" src="assets/images/team-mande.jpg" alt="Mande Ndema" onerror="this.src='https://placehold.co/700x900/E5E7EB/E5E7EB'">
-                <div class="rs-team-card-overlay">
-                    <div class="rs-team-role">Co-Founder &amp; CEO</div>
-                    <div class="rs-team-name">Mande Ndema</div>
-                    <div class="rs-team-qual"><i class="ri-graduation-cap-line"></i> LLB (UKZN) | PMD (GIBS) | Cert. Property Investment (Wits)</div>
+            </article>
+            <article class="mna-director wow fadeInUp" data-wow-delay="0.2s">
+                <div class="mna-director-photo"><img src="assets/images/team-mande.jpg" alt="Mande Ndema" loading="lazy" onerror="this.src='https://placehold.co/700x900/E5E7EB/E5E7EB'"></div>
+                <div class="mna-director-body">
+                    <p class="mna-director-role">Co-Founder &amp; CEO</p>
+                    <h3>Mande Ndema</h3>
+                    <p class="mna-director-qual">LLB (UKZN) &middot; PMD (GIBS) &middot; Cert. Property Investment (Wits)</p>
                 </div>
-            </div>
-            <div class="rs-team-card gsap-stagger-child wow fadeInUp" data-wow-delay="0.3s">
-                <img class="rs-team-card-img" src="assets/images/team-masibonge.jpg" alt="Masibonge Mzwakali" onerror="this.src='https://placehold.co/700x900/E5E7EB/E5E7EB'">
-                <div class="rs-team-card-overlay">
-                    <div class="rs-team-role">Director</div>
-                    <div class="rs-team-name">Masibonge Mzwakali</div>
-                    <div class="rs-team-qual"><i class="ri-graduation-cap-line"></i> LLB | Commercial &amp; Property Law</div>
+            </article>
+            <article class="mna-director wow fadeInUp" data-wow-delay="0.3s">
+                <div class="mna-director-photo"><img src="assets/images/team-masibonge.jpg" alt="Masibonge Mzwakali" loading="lazy" onerror="this.src='https://placehold.co/700x900/E5E7EB/E5E7EB'"></div>
+                <div class="mna-director-body">
+                    <p class="mna-director-role">Director</p>
+                    <h3>Masibonge Mzwakali</h3>
+                    <p class="mna-director-qual">LLB &middot; Commercial &amp; Property Law</p>
                 </div>
-            </div>
+            </article>
         </div>
     </div>
 </section>
@@ -2448,6 +2391,7 @@
                                     <ul>
                                         <li><a href="about.html">About MNA</a></li>
                                         <li><a href="index.html#rs-team">Our Team</a></li>
+                                        <li><a href="press.html">Press</a></li>
                                         <li><a href="index.html#rs-faq">FAQ</a></li>
                                         <li><a href="services.html">All Services</a></li>
                                         <li><a href="contact.html">Contact Us</a></li>

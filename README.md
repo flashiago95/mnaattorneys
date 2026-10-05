@@ -58,5 +58,6 @@ The enquiry forms on the homepage and `contact.html` post to [FormSubmit](https:
 - `about.html` — About the firm
 - `services.html` — Practice areas
 - `contact.html` — Enquiry form and office details
+- `press.html` — News, insights and media (currently placeholder content)
 
 Shared styles live in `assets/css/mna.css`; shared scripts in `assets/js/mna-site.js`.

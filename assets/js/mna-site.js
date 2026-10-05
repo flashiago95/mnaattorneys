@@ -117,3 +117,20 @@
         });
     }
 })();
+
+/* Press page: filter updates by type */
+(function () {
+    "use strict";
+    var buttons = document.querySelectorAll(".mna-press-filters button");
+    if (!buttons.length) return;
+    var items = document.querySelectorAll(".mna-press-item");
+    buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            var filter = btn.getAttribute("data-filter");
+            buttons.forEach(function (b) { b.classList.toggle("is-active", b === btn); });
+            items.forEach(function (item) {
+                item.hidden = filter !== "all" && item.getAttribute("data-kind") !== filter;
+            });
+        });
+    });
+})();
