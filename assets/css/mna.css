@@ -627,3 +627,18 @@ a:hover .mna-arrow { transform: translateX(4px); }
     .mna-profile { padding: 56px 0; }
 }
 .mna-area h2, .mna-approach h2 { line-height: 1.15; }
+
+/* Services: keep each practice area and its hover state inside the white column */
+.mna-practice-layout > div:last-child { padding: 56px 56px 32px; }
+.mna-practice-figure { margin: 0 0 70px; }
+.mna-area { margin: 0; padding: 56px 0 56px 32px; }
+.mna-area:hover { background: transparent; }
+.mna-area::before { top: 56px; bottom: 56px; }
+.mna-area:last-child { border-bottom: 0; }
+@media (max-width: 991px) {
+    .mna-practice-layout > div:last-child { padding: 0; }
+}
+@media (max-width: 768px) {
+    .mna-area { margin: 0; padding: 40px 0 40px 20px; }
+    .mna-area::before { top: 40px; bottom: 40px; }
+}
