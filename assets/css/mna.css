@@ -648,3 +648,53 @@ a:hover .mna-arrow { transform: translateX(4px); }
 .rs-footer-bottom .mna-credit a { color: #fff; font-weight: 600; }
 .rs-footer-bottom .mna-credit a:hover { color: var(--mna-brass); }
 @media (max-width: 768px) { .mna-credit { display: block; margin: 8px 0 0; padding: 0; border: 0; } }
+
+/* ==========================================================================
+   Inner-page heroes: same height, photo on the right, brand accents
+   ========================================================================== */
+.mna-ph { background: #1b2229; isolation: isolate; }
+.mna-ph::before {
+    opacity: 1; z-index: 0; filter: saturate(.75) contrast(1.05);
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+    left: 35%;
+}
+.mna-ph--about::before    { background-image: url('../images/about.jpg'); background-position: center 30%; }
+.mna-ph--services::before { background-image: url('../images/hero-bg-3.webp'); background-position: center 45%; }
+.mna-ph--team::before     { background-image: url('../images/why-mna.jpg'); background-position: center 25%; }
+.mna-ph--press::before    { background-image: url('../images/hero-bg-2.webp'); background-position: 20% 40%; }
+.mna-ph--contact::before  { background-image: url('../images/hero-bg-1.webp'); background-position: center 40%; }
+.mna-ph::after {
+    background:
+        linear-gradient(90deg, #1b2229 0%, #1b2229 35%, rgba(27,34,41,.88) 48%, rgba(27,34,41,.45) 72%, rgba(27,34,41,.2) 100%),
+        linear-gradient(0deg, rgba(27,34,41,.55) 0%, transparent 45%);
+}
+/* tri-colour base rule, matching the enquiry section */
+.mna-ph { border-bottom: 4px solid; border-image: linear-gradient(90deg, var(--mna-claret) 0 33.3%, var(--mna-ink) 33.3% 66.6%, var(--mna-brass) 66.6% 100%) 1; }
+.mna-ph .rs-page-header-inner { position: relative; }
+.mna-ph .rs-page-header-sub {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--mna-brass);
+    margin-bottom: 14px;
+}
+.mna-ph .rs-page-header-sub::before { content: ""; width: 34px; height: 1px; background: var(--mna-brass); }
+.mna-ph .rs-page-header-title {
+    position: relative; font-size: clamp(40px, 4.6vw, 64px); font-weight: 500; letter-spacing: -.015em;
+    padding-left: 26px; margin-bottom: 0;
+}
+.mna-ph .rs-page-header-title::before {
+    content: ""; position: absolute; left: 0; top: .14em; bottom: .14em; width: 5px; background: var(--mna-claret);
+}
+.mna-ph .rs-breadcrumb {
+    background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
+    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    padding: 10px 18px; color: rgba(255,255,255,.6);
+}
+.mna-ph .rs-breadcrumb a { color: rgba(255,255,255,.85); }
+.mna-ph .rs-breadcrumb a:hover { color: #fff; }
+.mna-ph .rs-breadcrumb .current { color: #fff; font-weight: 600; }
+@media (max-width: 768px) {
+    .mna-ph::before { left: 0; opacity: .5; }
+    .mna-ph::after { background: linear-gradient(90deg, rgba(27,34,41,.95), rgba(27,34,41,.75)); }
+    .mna-ph .rs-page-header-title { padding-left: 18px; }
+    .mna-ph .rs-page-header-title::before { width: 4px; }
+}
