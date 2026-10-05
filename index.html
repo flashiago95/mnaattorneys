@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mdyesha Ndema Attorneys | Corporate &amp; Commercial Law</title>
-    <meta name="description" content="MNA Attorneys — a boutique corporate law firm combining 30+ years of legal expertise with entrepreneurial insight. Johannesburg &amp; East London.">
+    <meta name="description" content="MNA Attorneys is a boutique corporate law firm combining 30+ years of legal expertise with entrepreneurial insight. Johannesburg &amp; East London.">
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.jpg">
@@ -13,7 +13,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
@@ -267,7 +267,7 @@
     }
 
     /* ============================================================
-       HERO — Bustar layout
+       HERO
     ============================================================ */
     .rs-hero-section {
         position: relative;
@@ -673,7 +673,7 @@
     @media(max-width:575px) { .rs-why-features { grid-template-columns: 1fr; } .rs-why-feat { border-right: none; } }
 
     /* ============================================================
-       TESTIMONIALS — Exact Bustar CSS from main.css
+       TESTIMONIALS
     ============================================================ */
     .rs-testimonial-area {
         position: relative;
@@ -1016,7 +1016,7 @@
     @media(max-width:575px) { .rs-why-features { grid-template-columns: 1fr; } .rs-why-feat { border-right: none; } }
 
     /* ============================================================
-       TESTIMONIALS — Exact Bustar CSS from main.css
+       TESTIMONIALS
     ============================================================ */
     .rs-testimonial-area {
         position: relative;
@@ -1318,7 +1318,7 @@
     @media(max-width:767px) { .rs-cta-inner { flex-direction: column; align-items: flex-start; } }
 
     /* ============================================================
-       FOOTER — Exact Bustar CSS from main.css
+       FOOTER
     ============================================================ */
     .rs-footer {
         position: relative;
@@ -1592,6 +1592,7 @@
     .backtotop-wrap.active-progress { display: flex; }
     .backtotop-wrap:hover { background: var(--rs-secondary); }
     </style>
+    <link rel="stylesheet" href="assets/css/mna.css">
 </head>
 <body>
 
@@ -1618,7 +1619,7 @@
 <div class="rs-announcement-bar">
     <div class="left">
         <span>Need expert legal guidance for your business?</span>
-        <a href="#rs-contact">Book a free consultation &rarr;</a>
+        <a href="contact.html">Book a consultation &rarr;</a>
     </div>
     <div class="right">
         <div class="meta"><i class="ri-phone-line"></i><a href="tel:0115133387">011 513 3387</a></div>
@@ -1639,29 +1640,27 @@
         <nav class="rs-main-nav multipage-menu">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
-            <a href="#rs-services">Services</a>
-            <a href="#rs-team">Our Team</a>
-            <a href="#rs-faq">FAQ</a>
-            <a href="#rs-contact">Contact</a>
+            <a href="services.html">Services</a>
+            <a href="index.html#rs-team">Our Team</a>
+            <a href="contact.html">Contact</a>
         </nav>
         <div style="display:flex;align-items:center;gap:14px">
-            <a href="#rs-contact" class="rs-header-btn">
+            <a href="contact.html" class="rs-header-btn">
                 Book Consultation <i class="ri-arrow-right-line"></i>
             </a>
-            <button class="rs-mobile-toggle" id="rsMobileToggle"><i class="ri-menu-3-line"></i></button>
+            <button class="rs-mobile-toggle" id="rsMobileToggle" aria-label="Open menu"><i class="ri-menu-3-line"></i></button>
         </div>
     </div>
 </header>
 
 <!-- Mobile Menu -->
 <div class="rs-mobile-nav-wrap" id="rsMobileNav">
-    <button class="rs-mobile-close" id="rsMobileClose"><i class="ri-close-line"></i></button>
+    <button class="rs-mobile-close" id="rsMobileClose" aria-label="Close menu"><i class="ri-close-line"></i></button>
     <a href="index.html" onclick="closeMobileNav()">Home</a>
     <a href="about.html" onclick="closeMobileNav()">About MNA</a>
-    <a href="#rs-services" onclick="closeMobileNav()">Our Services</a>
-    <a href="#rs-team" onclick="closeMobileNav()">Our Team</a>
-    <a href="#rs-faq" onclick="closeMobileNav()">FAQ</a>
-    <a href="#rs-contact" onclick="closeMobileNav()">Contact</a>
+    <a href="services.html" onclick="closeMobileNav()">Services</a>
+    <a href="index.html#rs-team" onclick="closeMobileNav()">Our Team</a>
+    <a href="contact.html" onclick="closeMobileNav()">Contact</a>
     <a href="tel:0115133387" style="color:#AB052D;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1)">
         <i class="ri-phone-line"></i> 011 513 3387
     </a>
@@ -1684,25 +1683,25 @@
                         Legal Expertise<br>That Works for<br>Your Business
                     </h1>
                     <div class="rs-hero-rule"></div>
-                    <p class="rs-hero-desc">We combine 30+ years of commercial and corporate law experience with a hands-on, solution-driven approach — so you get more than advice, you get results.</p>
+                    <p class="rs-hero-desc">We combine 30+ years of commercial and corporate law experience with a hands-on approach. You get advice you can act on, from directors who answer their own phones.</p>
                     <div class="rs-hero-btns">
-                        <a href="#rs-contact" class="rs-btn-pill">
-                            Free Consultation
+                        <a href="contact.html" class="rs-btn-pill">
+                            Book a Consultation
                             <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M12.0743 8.70831L0.916528 8.70831L0.916528 6.87526L12.0737 6.87461L7.15722 1.95816L8.45358 0.661793L15.5836 7.79179L8.45358 14.9218L7.15722 13.6254L12.0743 8.70831Z" fill="currentColor"/></svg>
                         </a>
                     </div>
                 </div>
                 <div class="rs-hero-right">
                     <div class="rs-hero-service-list">
-                        <a class="rs-hs-item" href="#rs-services">
+                        <a class="rs-hs-item" href="services.html#corporate">
                             <div class="rs-hs-left"><span class="rs-hs-num">01</span><span class="rs-hs-title">Commercial &amp; Corporate Law</span></div>
                             <div class="rs-hs-arrow"><i class="ri-arrow-right-up-line"></i></div>
                         </a>
-                        <a class="rs-hs-item" href="#rs-services">
+                        <a class="rs-hs-item" href="services.html#governance">
                             <div class="rs-hs-left"><span class="rs-hs-num">02</span><span class="rs-hs-title">Company Secretarial &amp; Governance</span></div>
                             <div class="rs-hs-arrow"><i class="ri-arrow-right-up-line"></i></div>
                         </a>
-                        <a class="rs-hs-item" href="#rs-services">
+                        <a class="rs-hs-item" href="services.html#property">
                             <div class="rs-hs-left"><span class="rs-hs-num">03</span><span class="rs-hs-title">Property Law &amp; Conveyancing</span></div>
                             <div class="rs-hs-arrow"><i class="ri-arrow-right-up-line"></i></div>
                         </a>
@@ -1720,9 +1719,9 @@
                         From Boardroom<br>Deals to Property<br><em>Transfers</em>
                     </h1>
                     <div class="rs-hero-rule"></div>
-                    <p class="rs-hero-desc">Whether you're closing a merger, registering a bond, or navigating corporate governance — our team handles it with precision and speed.</p>
+                    <p class="rs-hero-desc">Whether you're closing a merger, registering a bond, or settling a governance question, the same directors stay on your matter from first call to close.</p>
                     <div class="rs-hero-btns">
-                        <a href="#rs-services" class="rs-btn-pill">
+                        <a href="services.html" class="rs-btn-pill">
                             Our Services
                             <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M12.0743 8.70831L0.916528 8.70831L0.916528 6.87526L12.0737 6.87461L7.15722 1.95816L8.45358 0.661793L15.5836 7.79179L8.45358 14.9218L7.15722 13.6254L12.0743 8.70831Z" fill="currentColor"/></svg>
                         </a>
@@ -1730,15 +1729,15 @@
                 </div>
                 <div class="rs-hero-right">
                     <div class="rs-hero-service-list">
-                        <a class="rs-hs-item" href="#rs-services">
+                        <a class="rs-hs-item" href="services.html#corporate">
                             <div class="rs-hs-left"><span class="rs-hs-num">01</span><span class="rs-hs-title">Mergers &amp; Acquisitions</span></div>
                             <div class="rs-hs-arrow"><i class="ri-arrow-right-up-line"></i></div>
                         </a>
-                        <a class="rs-hs-item" href="#rs-services">
+                        <a class="rs-hs-item" href="services.html#corporate">
                             <div class="rs-hs-left"><span class="rs-hs-num">02</span><span class="rs-hs-title">Due Diligence Investigations</span></div>
                             <div class="rs-hs-arrow"><i class="ri-arrow-right-up-line"></i></div>
                         </a>
-                        <a class="rs-hs-item" href="#rs-services">
+                        <a class="rs-hs-item" href="services.html#corporate">
                             <div class="rs-hs-left"><span class="rs-hs-num">03</span><span class="rs-hs-title">BEE &amp; Empowerment Transactions</span></div>
                             <div class="rs-hs-arrow"><i class="ri-arrow-right-up-line"></i></div>
                         </a>
@@ -1766,15 +1765,15 @@
                 </div>
                 <div class="rs-hero-right">
                     <div class="rs-hero-service-list">
-                        <a class="rs-hs-item" href="#rs-services">
+                        <a class="rs-hs-item" href="services.html#entertainment">
                             <div class="rs-hs-left"><span class="rs-hs-num">01</span><span class="rs-hs-title">Entertainment &amp; Sports Law</span></div>
                             <div class="rs-hs-arrow"><i class="ri-arrow-right-up-line"></i></div>
                         </a>
-                        <a class="rs-hs-item" href="#rs-services">
+                        <a class="rs-hs-item" href="services.html#labour">
                             <div class="rs-hs-left"><span class="rs-hs-num">02</span><span class="rs-hs-title">Labour &amp; Employment Law</span></div>
                             <div class="rs-hs-arrow"><i class="ri-arrow-right-up-line"></i></div>
                         </a>
-                        <a class="rs-hs-item" href="#rs-services">
+                        <a class="rs-hs-item" href="services.html#personal-injury">
                             <div class="rs-hs-left"><span class="rs-hs-num">03</span><span class="rs-hs-title">Medical Malpractice &amp; Personal Injury</span></div>
                             <div class="rs-hs-arrow"><i class="ri-arrow-right-up-line"></i></div>
                         </a>
@@ -1814,7 +1813,7 @@
         </div>
         <div class="rs-trust-item wow fadeInUp" data-wow-delay="0.4s">
             <div class="rs-trust-icon"><i class="ri-map-pin-line"></i></div>
-            <div><span class="rs-trust-number">2</span><span class="rs-trust-label">Offices — JHB &amp; East London</span></div>
+            <div><span class="rs-trust-number">2</span><span class="rs-trust-label">Offices: JHB &amp; East London</span></div>
         </div>
     </div>
 </div>
@@ -1835,10 +1834,10 @@
                         <div class="rs-counter-static">30<sup>+</sup></div>
                     </div>
                     <div class="rs-counter-label">Years Of<br>Experience</div>
-                    <p class="rs-about-body">MNA was founded by practitioners who've worked inside the corporate world — as in-house legal advisers at Standard Bank, Land Bank, Sanlam, and JSE-listed companies. We understand what your business actually needs, not just what the law requires.</p>
+                    <p class="rs-about-body">MNA was founded by practitioners who've worked inside the corporate world as in-house legal advisers at Standard Bank, Land Bank, Sanlam, and JSE-listed companies. We understand what your business actually needs, not just what the law requires.</p>
                 </div>
-                <a href="#rs-services" class="rs-btn-pill-dark" style="margin-top:28px;display:inline-flex">
-                    Explore More <i class="ri-arrow-right-up-line"></i>
+                <a href="about.html" class="rs-btn-pill-dark" style="margin-top:28px;display:inline-flex">
+                    Our story <i class="ri-arrow-right-up-line"></i>
                 </a>
             </div>
             <div class="wow fadeInRight" data-wow-delay="0.2s">
@@ -1858,54 +1857,54 @@
                 <div class="rs-section-label wow fadeInUp">Our Services</div>
                 <h2 class="rs-section-title wow fadeInUp rs-split-text-enable split-in-up" data-wow-delay="0.1s">Legal Solutions Across Every <span>Area of Your Business</span></h2>
             </div>
-            <p class="rs-section-body wow fadeInUp" data-wow-delay="0.2s" style="max-width:340px">From commercial transactions to property transfers — we cover the full spectrum of your legal needs.</p>
+            <p class="rs-section-body wow fadeInUp" data-wow-delay="0.2s" style="max-width:340px">Commercial deals, property transfers, boardroom governance and the disputes that sometimes follow.</p>
         </div>
         <div class="rs-services-grid gsap-stagger-parent">
-            <div class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=70')">
+            <a href="services.html#corporate" class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=70')">
                 <div class="rs-svc-num">01</div>
                 <div class="rs-svc-icon"><i class="ri-briefcase-4-line"></i></div>
                 <h3 class="rs-svc-name">Commercial &amp; Corporate Law</h3>
                 <p class="rs-svc-desc">Mergers, acquisitions, due diligence, BEE transactions, joint ventures, and commercial contracts handled at the highest level.</p>
                 <i class="ri-arrow-right-line rs-svc-arrow"></i>
-            </div>
-            <div class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=70')">
+            </a>
+            <a href="services.html#governance" class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=70')">
                 <div class="rs-svc-num">02</div>
                 <div class="rs-svc-icon"><i class="ri-government-line"></i></div>
                 <h3 class="rs-svc-name">Company Secretarial &amp; Governance</h3>
                 <p class="rs-svc-desc">Board compliance, CIPC filings, King IV advisory, risk management, and full corporate governance support.</p>
                 <i class="ri-arrow-right-line rs-svc-arrow"></i>
-            </div>
-            <div class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=70')">
+            </a>
+            <a href="services.html#property" class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=70')">
                 <div class="rs-svc-num">03</div>
                 <div class="rs-svc-icon"><i class="ri-home-4-line"></i></div>
                 <h3 class="rs-svc-name">Property Law &amp; Conveyancing</h3>
                 <p class="rs-svc-desc">Property transfers, bond registrations, sectional title, township proclamation, evictions, and lease agreements.</p>
                 <i class="ri-arrow-right-line rs-svc-arrow"></i>
-            </div>
-            <div class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=600&q=70')">
+            </a>
+            <a href="services.html#litigation" class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=600&q=70')">
                 <div class="rs-svc-num">04</div>
                 <div class="rs-svc-icon"><i class="ri-scales-3-line"></i></div>
                 <h3 class="rs-svc-name">Litigation</h3>
-                <p class="rs-svc-desc">Commercial, civil, and labour disputes — from debt collection to High Court proceedings, interdicts, and enforcement.</p>
+                <p class="rs-svc-desc">Commercial, civil and labour disputes, from debt collection to High Court proceedings, interdicts, and enforcement.</p>
                 <i class="ri-arrow-right-line rs-svc-arrow"></i>
-            </div>
-            <div class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=600&q=70')">
+            </a>
+            <a href="services.html#entertainment" class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=600&q=70')">
                 <div class="rs-svc-num">05</div>
                 <div class="rs-svc-icon"><i class="ri-music-2-line"></i></div>
                 <h3 class="rs-svc-name">Entertainment &amp; Sports Law</h3>
                 <p class="rs-svc-desc">Artist and athlete representation, sponsorship agreements, music production contracts, film financing, and copyright matters.</p>
                 <i class="ri-arrow-right-line rs-svc-arrow"></i>
-            </div>
-            <div class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=70')">
+            </a>
+            <a href="services.html#labour" class="rs-service-card gsap-stagger-child" style="background-image:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=70')">
                 <div class="rs-svc-num">06</div>
                 <div class="rs-svc-icon"><i class="ri-user-3-line"></i></div>
                 <h3 class="rs-svc-name">Labour &amp; Employment Law</h3>
                 <p class="rs-svc-desc">Employment equity, disciplinary proceedings, HR policy drafting, collective agreements, and CCMA representation.</p>
                 <i class="ri-arrow-right-line rs-svc-arrow"></i>
-            </div>
+            </a>
         </div>
         <div class="rs-view-all wow fadeInUp">
-            <a href="#" class="rs-btn-outline-dark">View All Services <i class="ri-arrow-right-line"></i></a>
+            <a href="services.html" class="rs-btn-outline-dark">View All Services <i class="ri-arrow-right-line"></i></a>
         </div>
     </div>
 </section>
@@ -1921,8 +1920,8 @@
             <div class="rs-sectors-left wow fadeInLeft">
                 <span class="rs-sectors-overline">Who We Serve</span>
                 <h2 class="rs-sectors-title">Sectors We<br>Serve</h2>
-                <p class="rs-sectors-desc">From JSE-listed companies to government departments — our expertise spans the full breadth of South African industry, public sector, and private practice.</p>
-                <a href="#rs-services" class="rs-sectors-cta">
+                <p class="rs-sectors-desc">From JSE-listed companies to government departments, our work spans the full breadth of South African industry, public sector, and private practice.</p>
+                <a href="services.html" class="rs-sectors-cta">
                     View Our Services <i class="ri-arrow-right-line"></i>
                 </a>
             </div>
@@ -1990,7 +1989,7 @@
         <img class="rs-features-bg-img" src="assets/images/features-bg.jpg" alt="" onerror="this.style.display='none'">
         <div class="rs-features-bg-content wow fadeInUp">
             <span class="rs-features-bg-label">Explore Our Core Practice Areas</span>
-            <h2 class="rs-features-bg-title rs-split-text-enable split-in-up">Transforming legal challenges into<br>opportunities for your business</h2>
+            <h2 class="rs-features-bg-title rs-split-text-enable split-in-up">Counsel shaped by years<br>inside the businesses we advise</h2>
         </div>
     </div>
     <div class="rs-feature-cards gsap-stagger-parent">
@@ -2006,7 +2005,7 @@
                 <span class="rs-fc-tag">Banking</span>
                 <span class="rs-fc-tag">Sport</span>
             </div>
-            <a href="#rs-services" class="rs-fc-link">Explore Industries <i class="ri-arrow-right-up-line"></i></a>
+            <a href="#rs-sectors" class="rs-fc-link">Explore Industries <i class="ri-arrow-right-up-line"></i></a>
         </div>
         <div class="rs-feature-card gsap-stagger-child wow fadeInUp" data-wow-delay="0.2s">
             <div class="rs-fc-num">02<span></span></div>
@@ -2020,7 +2019,7 @@
                 <span class="rs-fc-tag">ICT Law</span>
                 <span class="rs-fc-tag">Governance</span>
             </div>
-            <a href="#rs-services" class="rs-fc-link">Explore Services <i class="ri-arrow-right-up-line"></i></a>
+            <a href="services.html" class="rs-fc-link">Explore Services <i class="ri-arrow-right-up-line"></i></a>
         </div>
         <div class="rs-feature-card gsap-stagger-child wow fadeInUp" data-wow-delay="0.3s">
             <div class="rs-fc-num">03<span></span></div>
@@ -2034,7 +2033,7 @@
                 <span class="rs-fc-tag">Advisory</span>
                 <span class="rs-fc-tag">Transactions</span>
             </div>
-            <a href="#rs-contact" class="rs-fc-link">Explore Solutions <i class="ri-arrow-right-up-line"></i></a>
+            <a href="contact.html" class="rs-fc-link">Talk to a director <i class="ri-arrow-right-up-line"></i></a>
         </div>
     </div>
 </section>
@@ -2049,8 +2048,8 @@
                 <img class="rs-why-img" src="assets/images/why-mna.jpg" alt="MNA Attorneys team" onerror="this.src='https://placehold.co/620x520/E5E7EB/E5E7EB'">
             </div>
             <div class="wow fadeInRight" data-wow-delay="0.15s">
-                <div class="rs-section-label">Easy Steps to Legal Success</div>
-                <h2 class="rs-section-title rs-split-text-enable split-in-up">Transforming your legal challenges into opportunities for growth</h2>
+                <div class="rs-section-label">Why clients choose MNA</div>
+                <h2 class="rs-section-title rs-split-text-enable split-in-up">Lawyers who have sat on your side of the table</h2>
                 <div class="rs-why-features gsap-stagger-parent">
                     <div class="rs-why-feat gsap-stagger-child">
                         <div class="rs-why-feat-icon"><i class="ri-briefcase-line"></i></div>
@@ -2060,7 +2059,7 @@
                     <div class="rs-why-feat gsap-stagger-child">
                         <div class="rs-why-feat-icon"><i class="ri-flow-chart"></i></div>
                         <h4 class="rs-why-feat-title">Streamlined Process</h4>
-                        <p class="rs-why-feat-desc">We handle your matter efficiently — no delays, no inflated hours, delivered on time and on budget.</p>
+                        <p class="rs-why-feat-desc">We handle your matter efficiently: no padded hours, clear timelines, and fees agreed up front.</p>
                     </div>
                     <div class="rs-why-feat gsap-stagger-child">
                         <div class="rs-why-feat-icon"><i class="ri-bar-chart-grouped-line"></i></div>
@@ -2070,7 +2069,7 @@
                     <div class="rs-why-feat gsap-stagger-child">
                         <div class="rs-why-feat-icon"><i class="ri-shield-user-line"></i></div>
                         <h4 class="rs-why-feat-title">Brand &amp; Risk Protection</h4>
-                        <p class="rs-why-feat-desc">From governance compliance to contractual safeguards — we protect your business and reputation.</p>
+                        <p class="rs-why-feat-desc">From governance compliance to contractual safeguards, we protect your business and its reputation.</p>
                     </div>
                 </div>
             </div>
@@ -2079,7 +2078,7 @@
 </section>
 
 <!-- ============================================================
-     TESTIMONIALS — Exact Bustar structure from Drive index.html
+     TESTIMONIALS
 ============================================================ -->
 <section class="rs-testimonial-area rs-testimonial-one section-space-top rs-swiper" id="rs-testimonials">
     <div class="rs-testimonial-bg-thumb include-bg"
@@ -2133,7 +2132,7 @@
                                                     <span class="rs-testimonial-rating">5.0</span>
                                                     <div class="rs-testimonial-rating-icon"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
                                                 </div>
-                                                <p class="rs-testimonial-desc">MNA handled our entire property transfer portfolio with exceptional professionalism. Their conveyancing team is second to none — fast, accurate, and always available.</p>
+                                                <p class="rs-testimonial-desc">MNA handled our entire property transfer portfolio with exceptional professionalism. Their conveyancing team is second to none: fast, accurate, and always available.</p>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
@@ -2209,13 +2208,13 @@
     <div class="container">
         <div class="rs-faq-grid">
             <div class="wow fadeInLeft">
-                <span class="rs-faq-label">Frequently Asked Questions</span>
+                <span class="rs-faq-label">Before you call</span>
                 <h2 class="rs-faq-title rs-split-text-enable split-in-up">Frequently Asked Questions</h2>
                 <p class="rs-faq-body">Find answers to common questions about MNA Attorneys, our services, and how we can help your business.</p>
                 <div class="rs-faq-contact">
                     <h4>Still Have Questions?</h4>
                     <p>Our team is here to help you find the right legal solution.</p>
-                    <a href="mailto:info@mnaattorneys.co.za" class="rs-btn-pill-white">
+                    <a href="contact.html" class="rs-btn-pill-white">
                         Contact Us <i class="ri-arrow-right-up-line"></i>
                     </a>
                 </div>
@@ -2239,7 +2238,7 @@
                 </div>
                 <div class="rs-faq-item">
                     <div class="rs-faq-question"><span class="rs-faq-q-text">How do I book a consultation?</span><div class="rs-faq-icon"><i class="ri-add-line"></i></div></div>
-                    <div class="rs-faq-answer"><p class="rs-faq-a-text">You can reach us by phone at 011 513 3387, by email at info@mnaattorneys.co.za, or through our website contact form. We respond to all enquiries within one business day.</p></div>
+                    <div class="rs-faq-answer"><p class="rs-faq-a-text">You can reach us by phone at 011 513 3387, by email at info@mnaattorneys.co.za, or through the <a href="contact.html" style="text-decoration:underline">enquiry form</a>. We respond to all enquiries within one business day.</p></div>
                 </div>
             </div>
         </div>
@@ -2285,18 +2284,78 @@
 </section>
 
 <!-- ============================================================
-     CTA
+     ENQUIRY
 ============================================================ -->
-<section class="rs-cta-section" id="rs-contact">
+<section class="mna-enquiry" id="rs-contact">
     <div class="container">
-        <div class="rs-cta-inner">
-            <div class="rs-cta-text wow fadeInLeft">
-                <h2>Ready to Resolve It?</h2>
-                <p>Whether it's a complex transaction, a governance challenge, or a matter that's been unresolved too long — MNA Attorneys is ready to help.</p>
+        <div class="mna-enquiry-grid">
+            <div class="mna-enquiry-intro wow fadeInUp">
+                <div class="rs-section-label">Speak to a director</div>
+                <h2>Tell us about the matter. <em>We'll take it from there.</em></h2>
+                <p>Send a short outline and a director will come back to you within one business day, usually sooner. First consultations are without obligation.</p>
+                <dl class="mna-direct">
+                        <div class="mna-direct-row"><dt>Johannesburg</dt><dd><a href="tel:0115133387">011 513 3387</a><br>Spaces, Design Quarter, Fourways</dd></div>
+                        <div class="mna-direct-row"><dt>East London</dt><dd><a href="tel:0437211018">043 721 1018</a><br>6 Sansom Street, Vincent</dd></div>
+                        <div class="mna-direct-row"><dt>Email</dt><dd><a href="mailto:info@mnaattorneys.co.za">info@mnaattorneys.co.za</a></dd></div>
+                        <div class="mna-direct-row"><dt>Hours</dt><dd>Monday to Friday, 08:00 to 18:00</dd></div>
+                    </dl>
             </div>
-            <div class="rs-cta-actions wow fadeInRight" data-wow-delay="0.15s">
-                <a href="tel:0115133387" class="rs-btn-white"><i class="ri-phone-line"></i> 011 513 3387</a>
-                <a href="mailto:info@mnaattorneys.co.za" class="rs-btn-outline-white">Email Us <i class="ri-mail-send-line"></i></a>
+            <div class="wow fadeInUp" data-wow-delay="0.1s">
+                <form class="mna-form mna-js-enquiry" novalidate>
+                        <h3 class="mna-form-title">Send an enquiry</h3>
+                        <p class="mna-form-note">Fields marked * are required.</p>
+                        <div class="mna-form-grid">
+                            <div class="mna-field">
+                                <label for="home-name">Full name <span class="req">*</span></label>
+                                <input id="home-name" name="Name" type="text" autocomplete="name" required>
+                                <span class="mna-field-error"></span>
+                            </div>
+                            <div class="mna-field">
+                                <label for="home-company">Company</label>
+                                <input id="home-company" name="Company" type="text" autocomplete="organization">
+                            </div>
+                            <div class="mna-field">
+                                <label for="home-email">Email <span class="req">*</span></label>
+                                <input id="home-email" name="Email" type="email" autocomplete="email" required>
+                                <span class="mna-field-error"></span>
+                            </div>
+                            <div class="mna-field">
+                                <label for="home-phone">Phone <span class="req">*</span></label>
+                                <input id="home-phone" name="Phone" type="tel" autocomplete="tel" required>
+                                <span class="mna-field-error"></span>
+                            </div>
+                            <div class="mna-field mna-field--full">
+                                <label for="home-area">Practice area</label>
+                                <select id="home-area" name="Practice area">
+                                <option value="">Select an area</option>
+                                <option value="Commercial & Corporate Law">Commercial &amp; Corporate Law</option>
+                                <option value="Company Secretarial & Governance">Company Secretarial &amp; Governance</option>
+                                <option value="Property Law & Conveyancing">Property Law &amp; Conveyancing</option>
+                                <option value="Litigation & Dispute Resolution">Litigation &amp; Dispute Resolution</option>
+                                <option value="Labour & Employment Law">Labour &amp; Employment Law</option>
+                                <option value="Entertainment & Sports Law">Entertainment &amp; Sports Law</option>
+                                <option value="ICT & Technology Law">ICT &amp; Technology Law</option>
+                                <option value="Public Sector Law">Public Sector Law</option>
+                                <option value="Medical Malpractice & Personal Injury">Medical Malpractice &amp; Personal Injury</option>
+                                <option value="Other / not sure">Other / not sure</option>
+                                </select>
+                            </div>
+                            <div class="mna-field mna-field--full">
+                                <label for="home-message">How can we help? <span class="req">*</span></label>
+                                <textarea id="home-message" name="Message" required placeholder="A short outline of the matter is enough. Please don't include confidential documents at this stage."></textarea>
+                                <span class="mna-field-error"></span>
+                            </div>
+                            <input class="mna-hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+                            <label class="mna-consent">
+                                <input type="checkbox" name="POPIA consent" value="Yes" required>
+                                <span>I consent to MNA Attorneys processing the information above to respond to my enquiry, in line with the Protection of Personal Information Act (POPIA). <span class="mna-field-error"></span></span>
+                            </label>
+                            <div class="mna-form-foot">
+                                <button type="submit" class="mna-btn">Send enquiry <i class="ri-arrow-right-line"></i></button>
+                                <p class="mna-form-status" role="status" aria-live="polite"></p>
+                            </div>
+                        </div>
+                    </form>
             </div>
         </div>
     </div>
@@ -2305,10 +2364,10 @@
 </main>
 
 <!-- ============================================================
-     FOOTER — Exact Bustar structure from Drive index.html
+     FOOTER
 ============================================================ -->
 <footer class="rs-footer rs-footer-area rs-footer-one theme-secondary">
-    <!-- Decorative shape overlays (simulate the Bustar city bg) -->
+    <!-- Decorative shape overlays  -->
     <div class="rs-footer-shape-one"></div>
     <div class="rs-footer-shape-two"></div>
     <div class="container">
@@ -2326,7 +2385,7 @@
                             </div>
                             <div class="rs-footer-widget-content">
                                 <p class="rs-footer-widget-desc">
-                                    MNA Attorneys specializes in helping businesses and individuals
+                                    MNA Attorneys specialises in helping businesses and individuals
                                     craft strategic legal solutions across South Africa.
                                 </p>
                                 <div class="rs-footer-widget-contact-info">
@@ -2343,7 +2402,7 @@
                                         <a href="mailto:info@mnaattorneys.co.za">info@mnaattorneys.co.za</a>
                                     </div>
                                     <div class="rs-footer-content-item">
-                                        <span>Hours: Mon–Fri: 8.00am – 18.00pm</span>
+                                        <span>Hours: Mon–Fri, 08:00–18:00</span>
                                     </div>
                                 </div>
                                 <div class="rs-footer-widget-social">
@@ -2365,10 +2424,10 @@
                                 <h5 class="rs-footer-widget-title">Practice Areas</h5>
                                 <div class="rs-footer-widget-link">
                                     <ul>
-                                        <li><a href="#rs-services">Commercial &amp; Corporate Law</a></li>
-                                        <li><a href="#rs-services">Company Secretarial</a></li>
-                                        <li><a href="#rs-services">Property &amp; Conveyancing</a></li>
-                                        <li><a href="#rs-services">Entertainment &amp; Sports</a></li>
+                                        <li><a href="services.html#corporate">Commercial &amp; Corporate Law</a></li>
+                                        <li><a href="services.html#governance">Company Secretarial</a></li>
+                                        <li><a href="services.html#property">Property &amp; Conveyancing</a></li>
+                                        <li><a href="services.html#entertainment">Entertainment &amp; Sports</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -2376,10 +2435,10 @@
                                 <h5 class="rs-footer-widget-title">Services</h5>
                                 <div class="rs-footer-widget-link">
                                     <ul>
-                                        <li><a href="#rs-services">Litigation</a></li>
-                                        <li><a href="#rs-services">Labour Law</a></li>
-                                        <li><a href="#rs-services">ICT Law</a></li>
-                                        <li><a href="#rs-services">Public Sector Law</a></li>
+                                        <li><a href="services.html#litigation">Litigation</a></li>
+                                        <li><a href="services.html#labour">Labour Law</a></li>
+                                        <li><a href="services.html#ict">ICT Law</a></li>
+                                        <li><a href="services.html#public-sector">Public Sector Law</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -2387,45 +2446,29 @@
                                 <h5 class="rs-footer-widget-title">Quick Links</h5>
                                 <div class="rs-footer-widget-link">
                                     <ul>
-                                        <li><a href="#rs-about">About MNA</a></li>
-                                        <li><a href="#rs-team">Our Team</a></li>
-                                        <li><a href="#rs-faq">FAQ</a></li>
-                                        <li><a href="#rs-contact">Contact Us</a></li>
+                                        <li><a href="about.html">About MNA</a></li>
+                                        <li><a href="index.html#rs-team">Our Team</a></li>
+                                        <li><a href="index.html#rs-faq">FAQ</a></li>
+                                        <li><a href="services.html">All Services</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Newsletter bar -->
-                        <div class="rs-footer-subscribe-from">
-                            <h5 class="rs-footer-subscribe-title">Subscribe Newsletter</h5>
-                            <div class="rs-footer-cta-input">
-                                <input id="footer-email" name="email" type="email" placeholder="Enter your email">
-                                <button type="button">
-                                    Send Now <svg class="icon-first" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M12.0743 8.70831L0.916528 8.70831L0.916528 6.87526L12.0737 6.87461L7.15722 1.95816L8.45358 0.661793L15.5836 7.79179L8.45358 14.9218L7.15722 13.6254L12.0743 8.70831Z" fill="white"></path></svg>
-                                </button>
+                        <!-- Offices -->
+                        <div class="mna-footer-offices">
+                            <div>
+                                <h6>Johannesburg</h6>
+                                <p>Spaces, Design Quarter<br>Fourways, Johannesburg<br><a href="tel:0115133387">011 513 3387</a></p>
+                            </div>
+                            <div>
+                                <h6>East London</h6>
+                                <p>6 Sansom Street<br>Vincent, East London<br><a href="tel:0437211018">043 721 1018</a></p>
                             </div>
                         </div>
 
-                        <!-- Brand trust badges -->
-                        <div class="rs-footer-brand">
-                            <div class="rs-footer-brand-thumb">
-                                <div style="width:100px;height:40px;border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;border-radius:4px;opacity:0.5">
-                                    <span style="color:white;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase">CERTIFIED</span>
-                                </div>
-                            </div>
-                            <div class="rs-footer-brand-thumb">
-                                <div style="width:80px;height:40px;border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;border-radius:4px;opacity:0.5">
-                                    <span style="color:white;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase">BBBEE L1</span>
-                                </div>
-                            </div>
-                            <div class="rs-footer-brand-thumb">
-                                <div style="width:90px;height:40px;border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;border-radius:4px;opacity:0.5">
-                                    <span style="color:white;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase">ISO 9001</span>
-                                </div>
-                            </div>
-                        </div>
-
+                        
                     </div>
                 </div>
 
@@ -2566,5 +2609,6 @@ document.querySelectorAll('.rs-faq-question').forEach(q => {
 // COUNTER ANIMATION — disabled, using static display
 // ============================================================
 </script>
+<script src="assets/js/mna-site.js"></script>
 </body>
 </html>

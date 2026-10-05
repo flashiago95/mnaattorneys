@@ -15,7 +15,7 @@
     function gsap_rs_split_text() {
         setTimeout(function () {
             var els = $("body:not(.rtl) .rs-split-text-enable");
-            if (els.length === 0) return;
+            if (els.length === 0 || typeof SplitText === "undefined") return;
             gsap.registerPlugin(SplitText, ScrollTrigger);
             els.each(function (index, element) {
                 var split = new SplitText(element, { type: "chars, words" });
@@ -161,10 +161,12 @@
             pos.y += (mouse.y - pos.y) * ratio;
             gsap.set(cursorBall, { x: pos.x, y: pos.y });
         });
-        $("a, button").on("mouseenter", function () {
-            gsap.to(cursorBall, { scale: 1.8, opacity: 0.15, duration: 0.3 });
-        }).on("mouseleave", function () {
-            gsap.to(cursorBall, { scale: 1, opacity: 1, duration: 0.3 });
+        $(document).on("mouseenter", "a, button, input, select, textarea, label", function () {
+            cursorBall.classList.add("is-hover");
+            gsap.to(cursorBall, { scale: 1.5, duration: 0.3 });
+        }).on("mouseleave", "a, button, input, select, textarea, label", function () {
+            cursorBall.classList.remove("is-hover");
+            gsap.to(cursorBall, { scale: 1, duration: 0.3 });
         });
     }
 

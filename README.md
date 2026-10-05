@@ -47,3 +47,16 @@ mna-attorneys/
 - East London: 043 721 1018  
 - info@mnaattorneys.co.za  
 - www.mnaattorneys.co.za
+
+## Enquiry forms
+
+The enquiry forms on the homepage and `contact.html` post to [FormSubmit](https://formsubmit.co), which emails each enquiry to info@mnaattorneys.co.za. The first submission sends a one-time activation email to that inbox; click the link in it to start receiving enquiries. The endpoint is set at the top of `assets/js/mna-site.js`.
+
+## Pages
+
+- `index.html` — Homepage
+- `about.html` — About the firm
+- `services.html` — Practice areas
+- `contact.html` — Enquiry form and office details
+
+Shared styles live in `assets/css/mna.css`; shared scripts in `assets/js/mna-site.js`.
