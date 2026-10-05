@@ -31,7 +31,7 @@
     });
 
     /* Odometer */
-    $('.odometer').appear(function (e) {
+    if ($.fn.appear) $('.odometer').appear(function (e) {
         var odo = $(".odometer");
         odo.each(function () {
             var countNumber = $(this).attr("data-count");
@@ -64,7 +64,7 @@
         });
 
         /* Mobile Menu */
-        $("#mobile-menu").meanmenu({
+        if ($.fn.meanmenu) $("#mobile-menu").meanmenu({
             meanMenuContainer: ".mobile-menu",
             meanScreenWidth: "1199",
             meanExpand: ['<i class="ri-add-large-line"></i>'],
