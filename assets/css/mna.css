@@ -642,3 +642,9 @@ a:hover .mna-arrow { transform: translateX(4px); }
     .mna-area { margin: 0; padding: 40px 0 40px 20px; }
     .mna-area::before { top: 40px; bottom: 40px; }
 }
+
+/* Footer credit */
+.mna-credit { margin-left: 14px; padding-left: 14px; border-left: 1px solid rgba(255,255,255,.2); white-space: nowrap; }
+.rs-footer-bottom .mna-credit a { color: #fff; font-weight: 600; }
+.rs-footer-bottom .mna-credit a:hover { color: var(--mna-brass); }
+@media (max-width: 768px) { .mna-credit { display: block; margin: 8px 0 0; padding: 0; border: 0; } }
