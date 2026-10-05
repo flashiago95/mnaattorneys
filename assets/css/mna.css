@@ -701,3 +701,43 @@ a:hover .mna-arrow { transform: translateX(4px); }
     .mna-ph .rs-page-header-title { padding-left: 18px; }
     .mna-ph .rs-page-header-title::before { width: 4px; }
 }
+
+/* Responsive fixes */
+@media (max-width: 991px) {
+    .mna-practice-layout { grid-template-columns: minmax(0, 1fr); }
+    .rs-testimonial-area .row { margin-left: 0; margin-right: 0; --bs-gutter-x: 0; }
+}
+@media (max-width: 768px) {
+    .mna-practice-figure figcaption { flex-wrap: wrap; }
+    .mna-practice-figure figcaption div { min-width: 0; }
+}
+.rs-testimonial-area, .rs-testimonial-slider-wrapper { overflow: hidden !important; }
+.scroll_reveal, .rs-why-section .rs-image { overflow: hidden; }
+@media (max-width: 575px) {
+    .rs-why-feat, .rs-why-feat:nth-child(2n) { padding: 22px 0; border-right: 0; border-bottom: 1px solid var(--rs-border); }
+    .rs-why-feat:last-child { border-bottom: 0; }
+    .rs-why-feat-icon { justify-content: flex-start; }
+    .rs-why-feat-desc { font-size: 14px; }
+}
+@media (max-width: 768px) {
+    .mna-ph .rs-page-header-inner { flex-direction: column; align-items: flex-start; gap: 18px; }
+    .mna-ph .rs-breadcrumb { padding: 7px 14px; font-size: 12px; }
+}
+@media (max-width: 991px) {
+    .mna-profile, .mna-profile--flip { gap: 0; }
+    .mna-profile-main { display: contents; }
+    .mna-profile-main > * { order: 2; }
+    .mna-profile-main > .mna-director-role, .mna-profile-main > h2, .mna-profile-main > .mna-profile-focus { order: 0; }
+    .mna-profile-main > .mna-profile-focus { margin-bottom: 28px; }
+    .mna-profile-aside, .mna-profile--flip .mna-profile-aside { order: 1; margin-bottom: 30px; }
+    .mna-profile-photo { max-width: 340px; }
+}
+.rs-announcement-bar .meta, .rs-announcement-bar .left a { white-space: nowrap; }
+@media (max-width: 991px) {
+    .rs-announcement-bar { flex-wrap: wrap; justify-content: center; gap: 6px 24px; text-align: center; }
+    .rs-announcement-bar .left { flex-wrap: wrap; justify-content: center; }
+}
+@media (max-width: 575px) {
+    .rs-announcement-bar .left span { display: none; }
+    .rs-announcement-bar .right { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 4px 18px; }
+}
