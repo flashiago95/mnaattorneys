@@ -61,3 +61,15 @@ The enquiry forms on the homepage and `contact.html` post to [FormSubmit](https:
 - `press.html` — News, insights and media (currently placeholder content)
 
 Shared styles live in `assets/css/mna.css`; shared scripts in `assets/js/mna-site.js`.
+
+## Ask MNA chat assistant
+
+A chat widget ("Ask MNA") answers visitors' questions about the firm using Claude Sonnet 5.5.
+
+- `api/chat.js` is a Vercel serverless function. It sends the visitor's question, the assistant's rules and the knowledge base to the Anthropic API and streams the answer back. The API key never reaches the browser.
+- `knowledge/mna-knowledge.md` is everything the assistant knows. Edit it to change or correct answers; it contains only public information.
+- `assets/js/mna-chat.js` is the widget. It only appears once the API key is configured.
+
+**Setup:** in Vercel → Project → Settings → Environment Variables, add `ANTHROPIC_API_KEY` (from console.anthropic.com) for Production (and Preview if wanted), then redeploy. Set a monthly spend limit in the Anthropic console.
+
+Safeguards: no legal advice or client confirmations (system rules), same-origin requests only, 20 questions per visitor per hour (best effort), 1,500-character messages, the last 12 messages of history. Conversations are not stored; only token counts are logged.
