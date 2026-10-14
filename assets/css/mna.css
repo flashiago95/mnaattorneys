@@ -823,3 +823,10 @@ a:hover .mna-arrow { transform: translateX(4px); }
     .mna-team-jump { grid-template-columns: 1fr; }
     .mna-team-jump a, .mna-team-jump a + a { padding-left: 0; border-left: 0; }
 }
+
+/* Larger header logo */
+.rs-header-inner { padding-top: 12px; padding-bottom: 12px; }
+.rs-logo img { height: 74px; padding: 6px 12px; border-radius: 3px; transition: height .3s ease; }
+#rs-sticky-header.active .rs-logo img { height: 62px; }
+@media (max-width: 1199px) { .rs-logo img { height: 62px; padding: 5px 10px; } }
+@media (max-width: 575px) { .rs-logo img { height: 54px; padding: 4px 8px; } }
