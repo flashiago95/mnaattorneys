@@ -77,6 +77,8 @@
             panel.hidden = !state;
             root.classList.toggle("is-open", state);
             launch.setAttribute("aria-expanded", String(state));
+            var fullScreen = window.matchMedia("(max-width: 575px), (max-height: 500px)").matches;
+            document.documentElement.classList.toggle("mna-chat-lock", state && fullScreen);
             if (state) setTimeout(function () { input.focus(); }, 50);
         }
         launch.addEventListener("click", function () { open(panel.hidden); });

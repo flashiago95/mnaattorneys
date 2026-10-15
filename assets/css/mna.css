@@ -880,8 +880,29 @@ a:hover .mna-arrow { transform: translateX(4px); }
 /* keep the back-to-top button clear of the launcher */
 .backtotop-wrap { bottom: 92px !important; }
 @media (max-width: 575px) {
-    .mna-chat { right: 12px; bottom: 12px; left: 12px; display: flex; justify-content: flex-end; }
-    .mna-chat-panel { width: 100%; max-width: none; height: calc(100vh - 24px); }
+    .mna-chat { right: 14px; bottom: calc(14px + env(safe-area-inset-bottom)); }
     .mna-chat-launch span { display: none; }
-    .mna-chat-launch { padding: 14px; border-radius: 50%; }
+    .mna-chat-launch { width: 56px; height: 56px; padding: 0; justify-content: center; border-radius: 50%; }
+    .mna-chat-launch i { font-size: 24px; }
+}
+/* Phones (portrait and landscape): the open chat takes the whole screen */
+@media (max-width: 575px), (max-height: 500px) {
+    .mna-chat.is-open { inset: 0; }
+    .mna-chat.is-open .mna-chat-panel {
+        width: 100%; max-width: none; height: 100vh; height: 100dvh; max-height: none;
+        border-top: 0; box-shadow: none;
+    }
+    .mna-chat-head { padding: calc(14px + env(safe-area-inset-top)) 18px 14px; }
+    .mna-chat-form { padding: 10px 12px; }
+    .mna-chat-form textarea { font-size: 16px; } /* 16px stops iOS zooming in on focus */
+    .mna-chat-note { padding-bottom: calc(10px + env(safe-area-inset-bottom)); font-size: 11px; }
+    .mna-chat-msg { max-width: 92%; }
+}
+html.mna-chat-lock, html.mna-chat-lock body { overflow: hidden; }
+/* Small phones: keep the header on one line */
+@media (max-width: 575px) {
+    .rs-header-btn { white-space: nowrap; padding: 11px 14px; font-size: 11px; gap: 6px; }
+}
+@media (max-width: 399px) {
+    .rs-header-btn { display: none !important; } /* "Book a consultation" stays in the bar above */
 }
