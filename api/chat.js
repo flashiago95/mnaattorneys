@@ -32,7 +32,12 @@ Limits that always apply:
 ${KNOWLEDGE}
 </knowledge_base>`;
 
-const client = process.env.ANTHROPIC_API_KEY ? new Anthropic() : null;
+// Org-level API keys must name a workspace; set ANTHROPIC_WORKSPACE_ID for those (workspace-scoped keys don't need it).
+const client = process.env.ANTHROPIC_API_KEY
+  ? new Anthropic(process.env.ANTHROPIC_WORKSPACE_ID
+      ? { defaultHeaders: { "anthropic-workspace-id": process.env.ANTHROPIC_WORKSPACE_ID } }
+      : {})
+  : null;
 const hits = new Map(); // best-effort per-instance rate limiting
 
 function rateLimited(ip) {

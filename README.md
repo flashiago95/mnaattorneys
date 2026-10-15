@@ -70,6 +70,6 @@ A chat widget ("Ask MNA") answers visitors' questions about the firm using Claud
 - `knowledge/mna-knowledge.md` is everything the assistant knows. Edit it to change or correct answers; it contains only public information.
 - `assets/js/mna-chat.js` is the widget. It only appears once the API key is configured.
 
-**Setup:** in Vercel → Project → Settings → Environment Variables, add `ANTHROPIC_API_KEY` (from console.anthropic.com) for Production (and Preview if wanted), then redeploy. Set a monthly spend limit in the Anthropic console.
+**Setup:** in Vercel → Project → Settings → Environment Variables, add `ANTHROPIC_API_KEY` (from console.anthropic.com; create it inside a workspace, or also add `ANTHROPIC_WORKSPACE_ID` if the key isn't workspace-scoped) for Production (and Preview if wanted), then redeploy. Set a monthly spend limit in the Anthropic console.
 
 Safeguards: no legal advice or client confirmations (system rules), same-origin requests only, 20 questions per visitor per hour (best effort), 1,500-character messages, the last 12 messages of history. Conversations are not stored; only token counts are logged.
