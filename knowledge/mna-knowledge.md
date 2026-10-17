@@ -198,7 +198,7 @@ MNA also offers a wide range of services across most branches of law within Sout
 Our people
 ### Over 30 years of combined experience, from top business law firms to the boardroom
 Our directors trained at leading South African law firms and went on to serve as in-house legal advisers and company secretaries at banks, development finance institutions and JSE-listed companies. They are supported by specialist practitioners such as our labour law consultant, an advocate and CCMA commissioner.
-Sibongile MdyeshaCo-founder & ChairmanMande NdemaCo-founder & CEOMasibonge MzwakaliDirector, Corporate & CommercialLuthando MoyakeLabour Law Consultant
+Sibongile MdyeshaCo-founder & ChairmanMande NdemaCo-founder & CEOMasibonge MzwakaliConsultantLuthando MoyakeLabour Law Consultant
 sibongile@mnaattorneys.co.za
 Qualifications
 - BA (Hons) International Relations, Rhodes
@@ -287,7 +287,7 @@ Qualifications
 - BA Law, UCT
 - LLB, UCT
 - PG Diploma in Corporate Law, UJ
-Director, Corporate & Commercial; Head of Legal Audit
+Consultant, Corporate & Commercial and Legal Audit
 ### Masibonge Mzwakali
 Legal audit & forensic investigationsData protection & IT lawProcurement lawM&A and securitisations
 Career at a glance
@@ -298,11 +298,11 @@ Corporate Affairs Manager, Sub-Saharan Africa, Philip Morris International
 - 2008
 Admitted as an attorney, Gauteng Division of the High Court
 - Now
-Director, Corporate & Commercial; Head of Legal Audit
+Consultant, Corporate & Commercial and Legal Audit
 Academic background
 Masibonge Mzwakali (Masi) graduated with BA Law and Bachelor of Laws (LLB) degrees from the University of Cape Town in 2001 and 2003 respectively. He subsequently obtained a postgraduate Diploma in Corporate Law from the University of Johannesburg.
 Experience
-Masi is the Director of our Corporate and Commercial practice and head of our Legal Audit department. He has extensive experience in conducting legal audits, having been involved in large-scale audit and review engagements as an external independent legal expert.
+Masi is a consultant to MNA’s Corporate and Commercial and Legal Audit work. He has extensive experience in conducting legal audits, having been involved in large-scale audit and review engagements as an external independent legal expert.
 He began his career as an associate at Bowman Gilfillan Attorneys (now Bowmans), gaining experience in corporate and commercial law. He then served as Corporate Affairs Manager for Sub-Saharan Africa at Philip Morris International for over six years, responsible for a wide range of global commercial and regulatory aspects of the business. He is a practising attorney of the Gauteng Division of the High Court of South Africa, admitted and enrolled in 2008.
 Masi has more than ten years of experience in corporate and commercial law, acting for domestic and multinational clients in sectors including telecommunications, provident funds, state-owned entities and FMCG, in both listed and unlisted environments. His main areas of expertise include corporate and commercial law; audit and forensic investigations; data protection, cybersecurity and information technology law; procurement law; M&A transactions; securitisations; corporate structuring and restructuring; and regulatory compliance.
 He also has substantial experience acting for the public sector, including national, provincial and local government and state-owned companies, in transactions and regulatory matters across sectors such as transport, energy, agriculture and forestry.
@@ -432,3 +432,19 @@ Spaces, Design Quarter, Leslie Avenue, Fourways, Johannesburg, 2191
 Company
 MNA Forensics (Pty) Ltd
 Reg. No. 2016/197272/07 · B-BBEE Level 1
+
+# SIPHOKAZI WALAZA (Senior Associate)
+
+- Senior Associate, Corporate and Commercial and Forensic Investigations practices; Johannesburg office. Email siphokazi@mnaattorneys.co.za, tel 011 513 3387.
+- Admitted Attorney of the High Court of South Africa on 20 May 2025; served her articles of clerkship at MNA; appointed Senior Associate in 2026.
+- Qualifications: LLB, Nelson Mandela University (2021); Master of Laws (LLM) in the final stage of completion.
+- Practice: company law and shareholder remedies; corporate governance and regulatory compliance; company secretarial practice; commercial agreements; support on commercial litigation, including shareholder and company disputes.
+- Forensic investigations: misconduct investigations, due diligence and compliance enquiries, and corporate policy reviews.
+- Sector focus: mining and prospecting law and the regulation of mineral rights, including the Mineral and Petroleum Resources Development Act 28 of 2002.
+- Publication: "The Sustainability of the Proper Plaintiff Principle under the Companies Act 71 of 2008", Journal of Corporate and Commercial Law and Practice, Vol. 9, Issue 2 (2023), Juta.
+
+# ROLES SUMMARY
+
+- Directors: Sibongile Mdyesha (Co-founder & Chairman), Mande Ndema (Co-founder & CEO).
+- Consultants: Masibonge Mzwakali (Corporate & Commercial and Legal Audit), Luthando Moyake (Labour Law).
+- Senior Associate: Siphokazi Walaza (Corporate & Commercial and Forensic Investigations).

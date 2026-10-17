@@ -906,3 +906,6 @@ html.mna-chat-lock, html.mna-chat-lock body { overflow: hidden; }
 @media (max-width: 399px) {
     .rs-header-btn { display: none !important; } /* "Book a consultation" stays in the bar above */
 }
+/* Team jump bar: five people */
+.mna-team-jump { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.mna-team-jump a + a { padding-left: 20px; border-left: 1px solid var(--mna-rule); }
