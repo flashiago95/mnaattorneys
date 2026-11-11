@@ -4,5 +4,17 @@
       "maxDuration": 60,
       "includeFiles": "knowledge/**"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/press.html",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/press",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
 }
