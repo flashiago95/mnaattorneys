@@ -15,6 +15,106 @@
       "source": "/press",
       "destination": "/",
       "permanent": false
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/about/",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/team",
+      "destination": "/team.html",
+      "permanent": true
+    },
+    {
+      "source": "/team/",
+      "destination": "/team.html",
+      "permanent": true
+    },
+    {
+      "source": "/our-team",
+      "destination": "/team.html",
+      "permanent": true
+    },
+    {
+      "source": "/our-team/",
+      "destination": "/team.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/gallery",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/gallery/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/library",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/library/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/forensics",
+      "destination": "/forensics.html",
+      "permanent": true
+    },
+    {
+      "source": "/forensics/",
+      "destination": "/forensics.html",
+      "permanent": true
     }
   ]
 }
