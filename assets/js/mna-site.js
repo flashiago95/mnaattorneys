@@ -134,3 +134,16 @@
         });
     });
 })();
+
+/* Mobile menu: lock the page behind it, close on Escape or after following a link. */
+(function () {
+    "use strict";
+    var nav = document.getElementById("rsMobileNav");
+    if (!nav) return;
+    function sync() { document.documentElement.classList.toggle("mna-nav-open", nav.classList.contains("open")); }
+    new MutationObserver(sync).observe(nav, { attributes: true, attributeFilter: ["class"] });
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && nav.classList.contains("open")) nav.classList.remove("open");
+    });
+    sync();
+})();

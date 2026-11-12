@@ -909,3 +909,32 @@ html.mna-chat-lock, html.mna-chat-lock body { overflow: hidden; }
 /* Team jump bar: five people */
 .mna-team-jump { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .mna-team-jump a + a { padding-left: 20px; border-left: 1px solid var(--mna-rule); }
+
+/* ------------------------------------------------------------
+   Mobile: no sideways zoom-out, and a menu that sits above everything
+   ------------------------------------------------------------ */
+/* iOS Safari lets you zoom out to anything that is only clipped on <body>;
+   clip on <html> too. "clip" (not "hidden") keeps the sticky header working. */
+html, body { max-width: 100%; overflow-x: clip; }
+
+/* The open menu must cover the sticky header (z 998) and the Ask MNA button (z 1000). */
+.rs-mobile-nav-wrap { z-index: 10010 !important; padding-top: calc(88px + env(safe-area-inset-top)) !important; overscroll-behavior: contain; }
+.rs-mobile-close {
+    z-index: 10011 !important;
+    top: calc(16px + env(safe-area-inset-top)) !important; right: 16px !important;
+    width: 48px; height: 48px; display: none; align-items: center; justify-content: center;
+    border: 1px solid rgba(255,255,255,.25) !important; border-radius: 50%;
+    font-size: 26px !important; line-height: 1;
+}
+.rs-mobile-nav-wrap.open .rs-mobile-close { display: flex; }
+html.mna-nav-open, html.mna-nav-open body { overflow: hidden; }
+html.mna-nav-open .mna-chat { display: none; }
+/* Draw the X in CSS so the close button never depends on the icon font. */
+.rs-mobile-close i { display: none; }
+.rs-mobile-close::before, .rs-mobile-close::after {
+    content: ""; position: absolute; left: 50%; top: 50%; width: 20px; height: 2px;
+    margin: -1px 0 0 -10px; background: #fff; border-radius: 1px;
+}
+.rs-mobile-close::before { transform: rotate(45deg); }
+.rs-mobile-close::after  { transform: rotate(-45deg); }
+.rs-mobile-close { position: fixed; }
